@@ -1,16 +1,27 @@
 import { PROJECTS } from "../constants"; // Importing projects data
+import { motion } from "framer-motion";
 
 const Projects = () => {
   return (
     <div className="pb-24">
       {/* Section Heading */}
-      <h2 className="my-20 text-center text-4xl font-bold">Projects</h2>
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="my-20 text-center text-4xl font-bold"
+      >
+        Projects
+      </motion.h2>
 
       {/* Projects Section */}
       <div className="flex flex-wrap items-center justify-center gap-8">
         {PROJECTS.map((project, index) => (
-          <div
+          <motion.div
             key={index}
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            transition={{ duration: 1 }}
             className="flex flex-col items-center w-full max-w-xl lg:w-3/4 bg-stone-800 p-6 rounded-lg shadow-lg"
           >
             {/* Project Image */}
@@ -22,12 +33,17 @@ const Projects = () => {
             />
 
             {/* Project Title and Description */}
-            <div className="text-center">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 1 }}
+              className="text-center"
+            >
               <h3 className="mb-2 font-semibold text-2xl text-white">
                 {project.title}
               </h3>
               <p className="mb-4 text-stone-400">{project.description}</p>
-            </div>
+            </motion.div>
 
             {/* Project Technologies */}
             <div className="flex flex-wrap justify-center gap-4">
@@ -40,7 +56,7 @@ const Projects = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

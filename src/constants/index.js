@@ -1,7 +1,6 @@
 import project1 from "../assets/projects/project-1.webp";
 import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
-import project4 from "../assets/projects/project-4.webp";
 export const HERO_CONTENT = `I’m a passionate Full Stack Developer with a focus on creating intuitive, scalable, and efficient web applications. With experience in React.js, Node.js, and MongoDB, I specialize in building both responsive front-end interfaces and robust back-end systems. My projects highlight my commitment to problem-solving and delivering innovative solutions to real-world challenges.`;
 
 export const ABOUT_TEXT = `I am a dedicated Full Stack Developer with a strong foundation in web development. I have experience in building both front-end and back-end systems using technologies such as React.js, Node.js, Express.js, and MongoDB. With a background in Computer Science from IIIT Vadodara, I have developed projects that showcase my skills in building user-friendly applications, optimizing performance, and ensuring security. I'm always looking to take on new challenges and contribute to impactful solutions.`;

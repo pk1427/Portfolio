@@ -1,22 +1,40 @@
 import { EXPERIENCES } from "../constants"; // Importing experiences data
+import { motion } from "framer-motion";
 
 const Experience = () => {
   return (
     <div className="pb-24">
       {/* Section Heading */}
-      <h2 className="my-20 text-center text-4xl font-bold">Experience</h2>
+      <motion.h2
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 0.5 }}
+        className="my-20 text-center text-4xl font-bold"
+      >
+        Experience
+      </motion.h2>
 
       {/* Experiences Section */}
       <div className="flex flex-col items-center">
         {EXPERIENCES.map((experience, index) => (
           <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
             {/* Year Section */}
-            <div className="w-full lg:w-1/4 text-center lg:text-right lg:pr-8">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1 }}
+              className="w-full lg:w-1/4 text-center lg:text-right lg:pr-8"
+            >
               <p className="mb-2 text-sm text-stone-400">{experience.year}</p>
-            </div>
+            </motion.div>
 
             {/* Role and Company Section */}
-            <div className="w-full max-w-xl lg:w-3/4">
+            <motion.div
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: 100 }}
+              transition={{ duration: 1 }}
+              className="w-full max-w-xl lg:w-3/4"
+            >
               <h3 className="mb-2 font-semibold text-xl">
                 {experience.role} -{" "}
                 <span className="text-sm text-stone-500">
@@ -36,7 +54,7 @@ const Experience = () => {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>

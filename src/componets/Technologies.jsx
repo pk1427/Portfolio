@@ -1,8 +1,10 @@
 import { DiNodejsSmall } from "react-icons/di";
 import { RiReactjsLine } from "react-icons/ri";
-import { SiMongodb } from "react-icons/si";
+import { SiMongodb, SiSolidity, SiTypescript } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { FaCss3Alt } from "react-icons/fa";
+// import { BsEthereum } from "react-icons/bs";
+import { SiEthereum } from "react-icons/si"; // Or FaEthereum if applicable
 
 import { motion } from "framer-motion";
 
@@ -16,7 +18,7 @@ const iconVariants = (duration) => ({
       duration: duration,
       ease: "linear",
       repeat: Infinity,
-      repeatType: "reverse", // Corrected "reversel" to "reverse"
+      repeatType: "reverse",
     },
   },
 });
@@ -35,6 +37,7 @@ const Technologies = () => {
       </motion.h2>
 
       {/* Icons Section */}
+
       <motion.div
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: -100 }}
@@ -42,6 +45,36 @@ const Technologies = () => {
         className="flex flex-wrap items-center justify-center gap-8"
       >
         {/* React Icon */}
+
+        {/* Solidity Icon */}
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(4)}
+          className="p-4"
+        >
+          <SiSolidity className="text-7xl text-gray-500" />
+        </motion.div>
+
+        {/* Ethereum Icon */}
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(3.5)}
+          className="p-4"
+        >
+          <SiEthereum className="text-7xl text-blue-400" />
+        </motion.div>
+
+        {/* TypeScript Icon */}
+        <motion.div
+          initial="initial"
+          animate="animate"
+          variants={iconVariants(5)}
+          className="p-4"
+        >
+          <SiTypescript className="text-7xl text-blue-600" />
+        </motion.div>
         <motion.div
           initial="initial"
           animate="animate"

@@ -1,9 +1,7 @@
 import project1 from "../assets/projects/project-1.webp";
 import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
-export const HERO_CONTENT = `I’m a passionate Full Stack Developer with a focus on creating intuitive, scalable, and efficient web applications. With experience in React.js, Node.js, and MongoDB, I specialize in building both responsive front-end interfaces and robust back-end systems. My projects highlight my commitment to problem-solving and delivering innovative solutions to real-world challenges.`;
-
-export const ABOUT_TEXT = `I am a dedicated Full Stack Developer with a strong foundation in web development. I have experience in building both front-end and back-end systems using technologies such as React.js, Node.js, Express.js, and MongoDB. With a background in Computer Science from IIIT Vadodara, I have developed projects that showcase my skills in building user-friendly applications, optimizing performance, and ensuring security. I'm always looking to take on new challenges and contribute to impactful solutions.`;
+export const HERO_CONTENT = `I’m a passionate Full Stack and Blockchain Developer focused on creating intuitive, scalable, and efficient web and decentralized applications. With expertise in React.js, Node.js, Solidity, and MongoDB, I specialize in building responsive front-end interfaces, robust back-end systems, and secure blockchain solutions. My projects showcase my commitment to innovation, problem-solving, and delivering impactful solutions to real-world challenges.`;
 
 export const EXPERIENCES = [
   {
@@ -32,8 +30,37 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
-    title: "Twitch Party Games",
+    title: "IdentifyMe",
     image: project1,
+    description:
+      "Built a decentralized platform enabling users to create, edit, and manage profiles securely on the blockchain. Users can control visibility of personal and professional details and access profiles via wallet addresses or usernames.",
+    technologies: [
+      "Solidity",
+      "Hardhat",
+      "Next.js",
+      "Ethers.js",
+      "TypeScript",
+      "BTT Testnet",
+      "BitTorrent",
+    ],
+  },
+  {
+    title: "CreatorConnect",
+    image: project2,
+    description:
+      "Developing a decentralized content sharing platform with wallet-based authentication and ERC-20 tokens for rewarding content creators. Leveraging IPFS for distributed storage and implementing React for a seamless UI/UX.",
+    technologies: [
+      "Solidity",
+      "OpenZeppelin",
+      "ERC-20",
+      "Ethereum",
+      "React.js",
+      "IPFS",
+    ],
+  },
+  {
+    title: "Twitch Party Games",
+    image: project3,
     description:
       "Created a Twitch extension enabling real-time games like Trivia and Tic-Tac-Toe, using WebSocket for interactive sessions.",
     technologies: [
@@ -43,27 +70,6 @@ export const PROJECTS = [
       "MongoDB",
       "WebSocket",
       "Twitch API",
-    ],
-  },
-  {
-    title: "Blood-Bank Platform",
-    image: project2,
-    description:
-      "Developed a donor-recipient matching platform with a location API, reducing match time by 40%. Implemented secure registration to increase match accuracy.",
-    technologies: ["React.js", "Node.js", "MongoDB", "CSS", "API Integration"],
-  },
-  {
-    title: "Client Availability System",
-    image: project3,
-    description:
-      "Built a scheduling system for real-time client availability and booking, using React and TypeScript. Developed secure login and dashboard for seamless user access and session management.",
-    technologies: [
-      "React.js",
-      "TypeScript",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "SCSS/CSS",
     ],
   },
 ];

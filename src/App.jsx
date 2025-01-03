@@ -5,6 +5,7 @@ import Projects from "./componets/Projects";
 import Experience from "./componets/Experiance";
 import Contact from "./componets/Contact";
 
+
 const App = () => {
   return (
     <div className="overflow-x-hidden text-stone-300 antialiased">
@@ -16,6 +17,7 @@ const App = () => {
       </div> */}
 
       <div className="container mx-auto px-8">
+        
         <Navbar />
         <Hero />
         <Technologies />

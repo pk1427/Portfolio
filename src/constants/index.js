@@ -28,6 +28,51 @@ export const EXPERIENCES = [
   },
 ];
 
+// export const PROJECTS = [
+//   {
+//     title: "IdentifyMe",
+//     image: project1,
+//     description:
+//       "Built a decentralized platform enabling users to create, edit, and manage profiles securely on the blockchain. Users can control visibility of personal and professional details and access profiles via wallet addresses or usernames.",
+//     technologies: [
+//       "Solidity",
+//       "Hardhat",
+//       "Next.js",
+//       "Ethers.js",
+//       "TypeScript",
+//       "BTT Testnet",
+//       "BitTorrent",
+//     ],
+//   },
+//   {
+//     title: "CreatorConnect",
+//     image: project2,
+//     description:
+//       "Developing a decentralized content sharing platform with wallet-based authentication and ERC-20 tokens for rewarding content creators. Leveraging IPFS for distributed storage and implementing React for a seamless UI/UX.",
+//     technologies: [
+//       "Solidity",
+//       "OpenZeppelin",
+//       "ERC-20",
+//       "Ethereum",
+//       "React.js",
+//       "IPFS",
+//     ],
+//   },
+//   {
+//     title: "Twitch Party Games",
+//     image: project3,
+//     description:
+//       "Created a Twitch extension enabling real-time games like Trivia and Tic-Tac-Toe, using WebSocket for interactive sessions.",
+//     technologies: [
+//       "React.js",
+//       "Node.js",
+//       "Express.js",
+//       "MongoDB",
+//       "WebSocket",
+//       "Twitch API",
+//     ],
+//   },
+// ];
 export const PROJECTS = [
   {
     title: "IdentifyMe",
@@ -43,6 +88,7 @@ export const PROJECTS = [
       "BTT Testnet",
       "BitTorrent",
     ],
+    github: "https://github.com/pk1427/identity-dapp",
   },
   {
     title: "CreatorConnect",
@@ -57,6 +103,7 @@ export const PROJECTS = [
       "React.js",
       "IPFS",
     ],
+    github: "https://github.com/pk1427/creator-connect",
   },
   {
     title: "Twitch Party Games",
@@ -71,9 +118,9 @@ export const PROJECTS = [
       "WebSocket",
       "Twitch API",
     ],
+    github: "https://github.com/pk1427/twitch-party-games",
   },
 ];
-
 export const CONTACT = {
   address: "Gandhinagar, Gujarat 382421",
   phoneNo: "+91-9657584288",

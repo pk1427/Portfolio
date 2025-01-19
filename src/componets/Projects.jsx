@@ -46,7 +46,7 @@ const Projects = () => {
             </motion.div>
 
             {/* Project Technologies */}
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-4 mb-4">
               {project.technologies.map((tech, techIndex) => (
                 <span
                   className="mr-2 rounded bg-stone-900 p-2 text-sm font-medium text-stone-300"
@@ -56,6 +56,18 @@ const Projects = () => {
                 </span>
               ))}
             </div>
+
+            {/* GitHub Link */}
+            {project.github && (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 rounded-full bg-purple-700 px-5 py-2 text-sm font-semibold text-white hover:bg-purple-900 transition-colors duration-300"
+              >
+                View on GitHub
+              </a>
+            )}
           </motion.div>
         ))}
       </div>

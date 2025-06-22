@@ -1,5 +1,5 @@
 import profilePic from "../assets/Prasad_Photo.jpg";
-import { HERO_CONTENT } from "../constants";
+import { HERO_CONTENT } from "../constants/index";
 import { motion } from "framer-motion";
 
 const containerVariants = {

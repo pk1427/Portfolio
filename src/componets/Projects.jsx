@@ -1,4 +1,4 @@
-import { PROJECTS } from "../constants"; // Importing projects data
+import { PROJECTS } from "../constants/index"; // Importing projects data
 import { motion } from "framer-motion";
 
 const Projects = () => {

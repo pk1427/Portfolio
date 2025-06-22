@@ -1,4 +1,4 @@
-import { EXPERIENCES } from "../constants"; // Importing experiences data
+import { EXPERIENCES } from "../constants/index"; // Importing experiences data
 import { motion } from "framer-motion";
 
 const Experience = () => {

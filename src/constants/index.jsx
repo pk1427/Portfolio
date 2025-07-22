@@ -156,20 +156,22 @@ export const PROJECTS = [
     github: "https://github.com/pk1427/identity-dapp",
   },
   {
-    title: "CreatorConnect",
-    image: project2,
+    title: "FantasyX",
+    image: project2, // Update this if you have a new image for FantasyX
     description:
-      "Developing a decentralized content sharing platform with wallet-based authentication and ERC-20 tokens for rewarding content creators. Leveraging IPFS for distributed storage and implementing React for a seamless UI/UX.",
+      "Developing a Web3 fantasy sports betting platform with NFT player cards, skill-based gameplay, and token rewards. Integrated wallet authentication using Wagmi & RainbowKit, and stored metadata on IPFS.",
     technologies: [
       "Solidity",
-      "OpenZeppelin",
-      "ERC-20",
-      "Ethereum",
-      "React.js",
+      "Hardhat",
+      "ERC-721",
       "IPFS",
+      "React.js",
+      "Wagmi",
+      "RainbowKit",
     ],
-    github: "https://github.com/pk1427/creator-connect",
+    github: "https://github.com/pk1427/FantasyX",
   },
+
   {
     title: "Twitch Party Games",
     image: project3,

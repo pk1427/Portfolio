@@ -32,7 +32,7 @@ const Projects = () => {
               className="mb-6 rounded"
             />
 
-            {/* Project Title and Description */}
+            {/* Project Title & Description */}
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
               initial={{ opacity: 0, x: 100 }}
@@ -57,17 +57,30 @@ const Projects = () => {
               ))}
             </div>
 
-            {/* GitHub Link */}
-            {project.github && (
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 rounded-full bg-purple-700 px-5 py-2 text-sm font-semibold text-white hover:bg-purple-900 transition-colors duration-300"
-              >
-                View on GitHub
-              </a>
-            )}
+            {/* Action Buttons */}
+            <div className="flex gap-4">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 rounded-full bg-purple-700 px-5 py-2 text-sm font-semibold text-white hover:bg-purple-900 transition-colors duration-300"
+                >
+                  GitHub
+                </a>
+              )}
+
+              {project.liveDemo && (
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 rounded-full border border-purple-500 text-purple-300 px-5 py-2 text-sm font-semibold hover:bg-purple-900 hover:text-white transition-colors duration-300"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>
           </motion.div>
         ))}
       </div>

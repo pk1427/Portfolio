@@ -147,7 +147,7 @@ export const PROJECTS = [
       "Vite",
       "Web3.js",
     ],
-    github: "https://github.com/pk1427/cryptolottery",
+    github: "https://github.com/pk1427/Aa-Solana-lottery",
     liveDemo: "https://lottery-solana-wine.vercel.app/", // ✅ Added
   },
   {

@@ -2,6 +2,7 @@ import project1 from "../assets/projects/project-1.webp";
 import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
+import resumePdf from "../Resume_27.pdf";
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -21,8 +22,8 @@ export const HERO_CONTENT = (
   <>
     I&apos;m a full stack blockchain developer focused on shipping products that
     feel closer to protocols than portfolio demos. I&apos;ve worked across
-    Solidity, Solana, oracle integrations, wallet UX, and real-time frontends
-    at teams like Finsocial, Quadb Technologies, and AppAvengers.
+    Solidity, Solana, oracle integrations, wallet UX, and real-time frontends at
+    teams like Finsocial, Quadb Technologies, and AppAvengers.
   </>
 );
 
@@ -219,5 +220,5 @@ export const CONTACT = {
   github: "https://github.com/pk1427",
   x: "https://x.com/PrasadKapure5?t=eKzhZo9kopjcQPSe8EZHQg&s=08",
   instagram: "https://instagram.com/prasad_kapure_",
-  resume: "/resume.pdf",
+  resume: resumePdf,
 };

@@ -11,6 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
+.chrome-profile/
+.chrome-profile-identifyme/
 
 # Editor directories and files
 .vscode/*

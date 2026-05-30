@@ -1,143 +1,218 @@
 import { DiNodejsSmall } from "react-icons/di";
 import { RiReactjsLine } from "react-icons/ri";
 import {
+  SiChainlink,
+  SiEthers,
+  SiExpress,
+  SiGit,
+  SiIpfs,
   SiMongodb,
+  SiNextdotjs,
+  SiOpenzeppelin,
+  SiPolygon,
+  SiPostgresql,
+  SiRust,
+  SiSolana,
   SiSolidity,
   SiTypescript,
-  SiPostgresql,
-  SiOpenzeppelin,
-  SiChainlink,
-  SiGit,
+  SiVite,
+  SiWalletconnect,
 } from "react-icons/si";
-import { TbBrandNextjs } from "react-icons/tb";
-import { FaCss3Alt } from "react-icons/fa";
+import {
+  LuActivity,
+  LuCoins,
+  LuDatabase,
+  LuLayers,
+  LuNetwork,
+  LuShieldCheck,
+  LuWallet,
+} from "react-icons/lu";
+import { TbHammer } from "react-icons/tb";
 import { SiEthereum } from "react-icons/si";
 import { motion } from "framer-motion";
-import { TECHNOLOGIES } from "../constants";
 
-const stackCards = [
+const protocolFocus = [
   {
-    title: "Contract layer",
-    description: "Solidity, Hardhat, OpenZeppelin, Chainlink, market logic",
-    accent: "from-sky-400/25 to-cyan-300/5",
+    icon: SiPolygon,
+    label: "BharatMarket",
+    detail: "Polygon Amoy prediction market with CPMM pricing and USDC flows",
+    color: "text-violet-300",
   },
   {
-    title: "Product layer",
-    description: "React, Next.js, wallet UX, state flows, polished interfaces",
-    accent: "from-violet-400/25 to-fuchsia-300/5",
+    icon: LuActivity,
+    label: "Market mechanics",
+    detail: "YES/NO trading, liquidity accounting, outcome resolution",
+    color: "text-amber-200",
   },
   {
-    title: "Infra layer",
-    description: "Node.js, PostgreSQL, MongoDB, Solana, deployment workflows",
-    accent: "from-emerald-400/25 to-teal-300/5",
+    icon: SiChainlink,
+    label: "Oracle layer",
+    detail: "Chainlink Functions and market data driven settlement paths",
+    color: "text-blue-300",
   },
 ];
 
-const iconCards = [
-  { icon: SiSolidity, label: "Solidity", color: "text-slate-100" },
-  { icon: SiEthereum, label: "Ethereum", color: "text-sky-400" },
-  { icon: SiChainlink, label: "Chainlink", color: "text-blue-500" },
-  { icon: SiOpenzeppelin, label: "OpenZeppelin", color: "text-violet-400" },
-  { icon: SiTypescript, label: "TypeScript", color: "text-blue-400" },
-  { icon: RiReactjsLine, label: "React", color: "text-cyan-400" },
-  { icon: TbBrandNextjs, label: "Next.js", color: "text-white" },
-  { icon: SiPostgresql, label: "PostgreSQL", color: "text-indigo-400" },
-  { icon: SiMongodb, label: "MongoDB", color: "text-emerald-400" },
-  { icon: DiNodejsSmall, label: "Node.js", color: "text-green-400" },
-  { icon: SiGit, label: "Git", color: "text-orange-400" },
-  { icon: FaCss3Alt, label: "CSS", color: "text-sky-500" },
+const skillGroups = [
+  {
+    title: "Chains & Protocols",
+    icon: LuNetwork,
+    skills: [
+      { icon: SiEthereum, label: "Ethereum", note: "EVM contracts", color: "text-slate-100" },
+      { icon: SiSolana, label: "Solana", note: "Anchor programs", color: "text-emerald-300" },
+      { icon: SiPolygon, label: "Polygon", note: "BharatMarket", color: "text-violet-300" },
+      { icon: LuCoins, label: "USDC rails", note: "Stablecoin flows", color: "text-amber-200" },
+    ],
+  },
+  {
+    title: "Smart Contracts",
+    icon: LuShieldCheck,
+    skills: [
+      { icon: SiSolidity, label: "Solidity", note: "Market logic", color: "text-slate-100" },
+      { icon: SiRust, label: "Rust", note: "Solana logic", color: "text-orange-300" },
+      { icon: TbHammer, label: "Hardhat", note: "Testing + deploys", color: "text-yellow-200" },
+      { icon: SiOpenzeppelin, label: "OpenZeppelin", note: "Secure primitives", color: "text-indigo-300" },
+    ],
+  },
+  {
+    title: "Oracle & Wallet UX",
+    icon: LuWallet,
+    skills: [
+      { icon: SiChainlink, label: "Chainlink", note: "Oracle workflows", color: "text-blue-300" },
+      { icon: SiEthers, label: "Ethers.js", note: "Contract reads", color: "text-violet-200" },
+      { icon: SiWalletconnect, label: "Wallet UX", note: "User signing flows", color: "text-teal-200" },
+      { icon: LuLayers, label: "Wagmi/RainbowKit", note: "Network states", color: "text-pink-200" },
+    ],
+  },
+  {
+    title: "Product Engineering",
+    icon: LuDatabase,
+    skills: [
+      { icon: SiTypescript, label: "TypeScript", note: "Typed app logic", color: "text-blue-300" },
+      { icon: RiReactjsLine, label: "React", note: "Interactive UI", color: "text-cyan-300" },
+      { icon: SiNextdotjs, label: "Next.js", note: "Full-stack apps", color: "text-white" },
+      { icon: SiVite, label: "Vite", note: "Fast builds", color: "text-purple-300" },
+      { icon: DiNodejsSmall, label: "Node.js", note: "APIs + services", color: "text-green-300" },
+      { icon: SiExpress, label: "Express", note: "Backend routes", color: "text-slate-200" },
+      { icon: SiPostgresql, label: "PostgreSQL", note: "Trading data", color: "text-sky-300" },
+      { icon: SiMongodb, label: "MongoDB", note: "App storage", color: "text-emerald-300" },
+      { icon: SiIpfs, label: "IPFS", note: "NFT metadata", color: "text-teal-300" },
+      { icon: SiGit, label: "Git", note: "Team workflow", color: "text-orange-300" },
+    ],
+  },
 ];
 
 const Technologies = () => {
   return (
-    <section id="stack" className="pb-24">
+    <section id="stack" className="section-shell">
       <motion.div
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 32 }}
         transition={{ duration: 0.7 }}
-        className="glass-card overflow-hidden p-6 sm:p-8 lg:p-10"
+        className="overflow-hidden border-y border-white/10 py-10 sm:py-12 lg:py-14"
       >
-        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
-          <div>
-            <span className="section-kicker">Stack Architecture</span>
-            <h2 className="section-title max-w-lg">
-              A sharper stack story, not just a wall of logos.
-            </h2>
-            <p className="section-copy">
-              The strongest Web3 portfolios explain how the tooling supports the
-              product. This section now frames the stack around the layers I use
-              to ship protocol-driven experiences end to end.
-            </p>
+        <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <div className="section-header">
+              <span className="section-kicker">Protocol Stack</span>
+              <h2 className="section-title max-w-xl">
+                Ethereum, Solana, Polygon, and the product layer around them.
+              </h2>
+              <p className="section-copy">
+                A senior Web3 portfolio should show what each tool is used for.
+                This stack is organized around the systems I actually build:
+                markets, smart contracts, oracle resolution, wallet execution,
+                and production frontends.
+              </p>
+            </div>
 
-            <div className="mt-8 grid gap-4">
-              {stackCards.map((card, index) => (
+            <div className="mt-6 grid gap-3 sm:mt-8">
+              {protocolFocus.map(({ icon: Icon, label, detail, color }, index) => (
                 <motion.div
-                  key={card.title}
+                  key={label}
                   whileInView={{ opacity: 1, x: 0 }}
-                  initial={{ opacity: 0, x: -30 }}
-                  transition={{ duration: 0.5, delay: index * 0.08 }}
-                  className={`rounded-[1.6rem] border border-white/10 bg-gradient-to-br ${card.accent} p-[1px]`}
+                  initial={{ opacity: 0, x: -24 }}
+                  transition={{ duration: 0.45, delay: index * 0.08 }}
+                  className="grid grid-cols-[42px_1fr] items-center gap-3 rounded-lg border border-white/10 bg-[#10120f]/80 p-3 shadow-[0_16px_45px_rgba(0,0,0,0.22)] sm:grid-cols-[48px_1fr] sm:gap-4 sm:p-4"
                 >
-                  <div className="rounded-[calc(1.6rem-1px)] bg-slate-950/90 p-5">
-                    <p className="text-[11px] uppercase tracking-[0.3em] text-slate-500">
-                      Layer {index + 1}
-                    </p>
-                    <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-white">
-                      {card.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-400">
-                      {card.description}
-                    </p>
+                  <div className="flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.045] sm:h-12 sm:w-12">
+                    <Icon className={`text-xl sm:text-2xl ${color}`} />
+                  </div>
+                  <div>
+                    <h3 className="text-base font-semibold text-white">{label}</h3>
+                    <p className="mt-1 text-xs leading-5 text-slate-400 sm:text-sm sm:leading-6">{detail}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              {TECHNOLOGIES.map((tech) => (
-                <span key={tech} className="chip">
-                  {tech}
-                </span>
-              ))}
+            <div className="mt-3 rounded-lg border border-white/10 bg-gradient-to-br from-teal-200/10 via-white/[0.035] to-amber-200/10 p-4 sm:p-5">
+              <p className="text-[11px] uppercase tracking-[0.28em] text-slate-500">
+                Current build thesis
+              </p>
+              <p className="mt-3 text-sm leading-6 text-slate-300 sm:leading-7">
+                BharatMarket ties the stack together: Polygon contracts,
+                Chainlink-backed resolution, stablecoin settlement, and a
+                frontend that explains protocol state before the user signs.
+              </p>
+              <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
+                {["Polygon", "Chainlink", "USDC"].map((item) => (
+                  <div
+                    key={item}
+                    className="rounded-md border border-white/10 bg-black/20 px-2 py-2 text-center text-[11px] font-semibold text-slate-200 sm:px-3 sm:text-xs"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.18),_transparent_40%),radial-gradient(circle_at_80%_10%,_rgba(168,85,247,0.18),_transparent_32%)] blur-2xl" />
-            <div className="relative rounded-[2rem] border border-white/10 bg-[#07101f] p-5 sm:p-6">
-              <div className="grid gap-4 sm:grid-cols-2">
-                {iconCards.map(({ icon: Icon, label, color }, index) => (
-                  <motion.div
-                    key={label}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    initial={{ opacity: 0, y: 24 }}
-                    transition={{ duration: 0.45, delay: index * 0.04 }}
-                    className="group rounded-[1.5rem] border border-white/8 bg-white/[0.03] p-5 transition duration-300 hover:-translate-y-1 hover:border-sky-400/30 hover:bg-white/[0.05]"
-                  >
-                    <div className="flex items-center justify-between">
-                      <Icon className={`text-4xl ${color}`} />
-                      <span className="text-[10px] uppercase tracking-[0.3em] text-slate-600">
-                        Core
-                      </span>
+          <div className="grid gap-4">
+            {skillGroups.map(({ title, icon: GroupIcon, skills }, groupIndex) => (
+              <motion.div
+                key={title}
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 28 }}
+                transition={{ duration: 0.5, delay: groupIndex * 0.06 }}
+                className="rounded-lg border border-white/10 bg-[#0f120e]/85 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.3)] sm:p-5"
+              >
+                <div className="mb-4 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-md border border-teal-200/20 bg-teal-200/10 sm:h-10 sm:w-10">
+                      <GroupIcon className="text-lg text-teal-100 sm:text-xl" />
                     </div>
-                    <p className="mt-8 text-base font-medium text-slate-200">
-                      {label}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
+                    <h3 className="text-base font-semibold text-white sm:text-lg">{title}</h3>
+                  </div>
+                  <span className="rounded-md border border-white/10 bg-white/[0.04] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.16em] text-slate-500 sm:text-xs sm:tracking-[0.2em]">
+                    {skills.length} skills
+                  </span>
+                </div>
 
-              <div className="mt-5 rounded-[1.5rem] border border-white/10 bg-gradient-to-r from-sky-400/10 via-transparent to-violet-400/10 p-5">
-                <p className="text-[11px] uppercase tracking-[0.32em] text-slate-500">
-                  Delivery mindset
-                </p>
-                <p className="mt-3 max-w-xl text-sm leading-7 text-slate-300">
-                  I don&apos;t separate smart contracts from UX. I build the
-                  contract logic, wallet flow, and frontend experience as one
-                  system so the product feels coherent in production.
-                </p>
-              </div>
-            </div>
+                <div className="grid grid-cols-2 items-stretch gap-2 min-[460px]:gap-3 sm:grid-cols-2 xl:grid-cols-4">
+                  {skills.map(({ icon: Icon, label, note, color }, skillIndex) => (
+                    <motion.div
+                      key={label}
+                      whileHover={{ y: -4 }}
+                      transition={{ type: "spring", stiffness: 320, damping: 24 }}
+                      className="group min-h-[112px] rounded-lg border border-white/10 bg-white/[0.035] p-3 transition duration-300 hover:border-teal-200/30 hover:bg-white/[0.06] sm:min-h-[118px] sm:p-4"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="flex h-9 w-9 items-center justify-center rounded-md border border-white/10 bg-[#090b09] sm:h-11 sm:w-11">
+                          <Icon className={`text-xl sm:text-2xl ${color}`} />
+                        </div>
+                        <span className="text-[9px] font-medium uppercase tracking-[0.14em] text-slate-600 sm:text-[10px] sm:tracking-[0.18em]">
+                          0{skillIndex + 1}
+                        </span>
+                      </div>
+                      <p className="mt-3 text-sm font-semibold text-slate-100 sm:mt-4">
+                        {label}
+                      </p>
+                      <p className="mt-1 text-xs leading-5 text-slate-500">{note}</p>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </motion.div>

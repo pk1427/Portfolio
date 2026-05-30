@@ -1,7 +1,7 @@
-import project1 from "../assets/projects/project-1.webp";
-import project2 from "../assets/projects/project-2.webp";
 import project3 from "../assets/projects/project-3.webp";
-import project4 from "../assets/projects/project-4.webp";
+import bharatMarketScreenshot from "../assets/projects/bharat-market-screenshot.png";
+import cryptoLotteryScreenshot from "../assets/projects/crypto-lottery-screenshot.png";
+import identifyMeScreenshot from "../assets/projects/identifyme-screenshot.png";
 import resumePdf from "../Resume_27.pdf";
 
 export const NAV_LINKS = [
@@ -13,19 +13,37 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_STATS = [
-  { value: "3+", label: "Production internships" },
-  { value: "Web3", label: "Protocol-first mindset" },
-  { value: "CPMM", label: "Market mechanism shipped" },
+  { value: "5", label: "Protocol-style products" },
+  { value: "2", label: "EVM + Solana ecosystems" },
+  { value: "CPMM", label: "Market engine implemented" },
 ];
 
 export const HERO_CONTENT = (
   <>
-    I&apos;m a full stack blockchain developer focused on shipping products that
-    feel closer to protocols than portfolio demos. I&apos;ve worked across
-    Solidity, Solana, oracle integrations, wallet UX, and real-time frontends at
-    teams like Finsocial, Quadb Technologies, and AppAvengers.
+    I&apos;m a blockchain engineer building smart-contract systems, market
+    mechanisms, oracle workflows, and wallet-native product surfaces. My work
+    sits at the boundary of Solidity/Rust contracts, protocol UX, and production
+    frontend execution.
   </>
 );
+
+export const PROTOCOL_PRINCIPLES = [
+  {
+    title: "Mechanism design",
+    description:
+      "Pricing, liquidity, rewards, resolution, and user incentives are modeled as product-critical protocol behavior.",
+  },
+  {
+    title: "Security posture",
+    description:
+      "Contract flows are built with explicit assumptions, access boundaries, deterministic state transitions, and testable failure paths.",
+  },
+  {
+    title: "Production UX",
+    description:
+      "Wallet actions, pending states, network handling, and data freshness are treated as core protocol surfaces.",
+  },
+];
 
 export const EXPERIENCES = [
   {
@@ -34,7 +52,7 @@ export const EXPERIENCES = [
     company: "AppAvengers",
     companyUrl: "https://appavengers.com",
     description:
-      "Focusing on Ethereum smart contracts, Solana with Anchor, and decentralized application development across production-oriented Web3 projects.",
+      "Building Ethereum and Solana systems with contract logic, Anchor programs, and application flows designed around real user transactions.",
     technologies: [
       "Solidity",
       "Rust",
@@ -52,7 +70,7 @@ export const EXPERIENCES = [
     company: "Finsocial Digital Systems",
     companyUrl: "https://finsocial.tech",
     description:
-      "Built DEX smart contracts for token swaps, SLTP, and futures trading while integrating Chainlink-powered market data and PostgreSQL-backed trading workflows.",
+      "Built DEX smart contracts for token swaps, SLTP, and futures trading, integrating Chainlink market data and PostgreSQL-backed trading workflows.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -68,7 +86,7 @@ export const EXPERIENCES = [
     company: "Quadb Technologies",
     companyUrl: "https://quadbtech.com",
     description:
-      "Contributed to EVM-compatible infrastructure after in-house blockchain training, working on RPC integration, agent logic, and modular contract architecture.",
+      "Contributed to EVM-compatible infrastructure, RPC integration, agent logic, and modular contract architecture after in-house blockchain training.",
     technologies: ["Solidity", "TypeScript", "Web3.js", "Git", "EVM"],
   },
   {
@@ -77,7 +95,7 @@ export const EXPERIENCES = [
     company: "Brandlane",
     companyUrl: "https://brandlane.in/",
     description:
-      "Delivered responsive pages, launched growth-oriented company and careers experiences, and supported production deployments with high uptime.",
+      "Delivered responsive production pages, launched company and careers experiences, and supported deployments with reliability-focused execution.",
     technologies: [
       "React.js",
       "SCSS",
@@ -93,14 +111,16 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "BharatMarket",
-    image: project2,
+    image: bharatMarketScreenshot,
     featured: true,
     tag: "Featured Project",
     accent: "from-amber-300 via-orange-400 to-red-500",
     description:
-      "Built a full-stack decentralized prediction market on Polygon Amoy enabling users to trade YES/NO outcomes using a CPMM-based pricing model. The platform supports wallet-based trading, liquidity provisioning, and oracle-driven market resolution using Chainlink Functions. Designed as a production-style Web3 application with real-time on-chain interaction and stablecoin (USDC) integration.",
+      "Designed and built a decentralized prediction market on Polygon Amoy where users trade YES/NO outcomes against a CPMM pricing model. The system combines wallet-based trading, liquidity provisioning, USDC flows, and Chainlink Functions for oracle-driven resolution.",
     features:
-      "YES/NO trading, liquidity pools, oracle-based resolution, wallet integration",
+      "CPMM pricing, YES/NO outcome tokens, liquidity pools, oracle resolution, wallet execution, USDC settlement",
+    architecture:
+      "Contracts handle market creation, collateralized trading, liquidity accounting, and resolution boundaries while the frontend keeps wallet actions and market state legible.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -119,10 +139,12 @@ export const PROJECTS = [
   },
   {
     title: "CryptoLottery",
-    image: project4,
+    image: cryptoLotteryScreenshot,
     accent: "from-violet-300 via-fuchsia-400 to-purple-500",
     description:
-      "Built a decentralized lottery platform on Solana with transparent draw mechanics, wallet-based participation, and past lottery tracking for a production-style experience.",
+      "Built a Solana lottery application with Anchor-backed program logic, wallet participation, transparent draw mechanics, and historical lottery tracking.",
+    architecture:
+      "Program-first flow with account state, participant tracking, draw lifecycle handling, and a frontend tuned for wallet execution.",
     technologies: [
       "Solana",
       "Rust",
@@ -138,10 +160,12 @@ export const PROJECTS = [
   },
   {
     title: "IdentifyMe",
-    image: project1,
+    image: identifyMeScreenshot,
     accent: "from-cyan-300 via-sky-500 to-indigo-500",
     description:
-      "Built a decentralized identity platform where users create, edit, and manage profiles on-chain with wallet-based discovery and configurable visibility controls.",
+      "Built an on-chain identity product where users create, edit, and discover wallet-linked profiles with configurable visibility controls.",
+    architecture:
+      "Profile state and access rules live on-chain, while the app focuses on clear identity discovery and update flows.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -160,7 +184,9 @@ export const PROJECTS = [
     image: project3,
     accent: "from-emerald-300 via-teal-400 to-cyan-500",
     description:
-      "Built a Web3 fantasy sports product with NFT player cards, skill-based gameplay, token rewards, and wallet onboarding powered by Wagmi and RainbowKit.",
+      "Built a Web3 fantasy sports product with NFT player cards, skill-based gameplay, token rewards, IPFS metadata, and wallet onboarding.",
+    architecture:
+      "ERC-721 assets, reward mechanics, metadata storage, and frontend wallet flows are composed into a game-like product loop.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -174,42 +200,26 @@ export const PROJECTS = [
     live: "https://fantasyx-frontend.vercel.app/",
     metrics: ["NFT gameplay", "Wallet auth", "Reward mechanics"],
   },
-  {
-    title: "Twitch Party Games",
-    image: project3,
-    accent: "from-fuchsia-300 via-pink-400 to-rose-500",
-    description:
-      "Created a Twitch extension for real-time multiplayer experiences like Trivia and Tic-Tac-Toe using WebSockets for low-latency player interaction.",
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "WebSocket",
-      "Twitch API",
-    ],
-    github: "https://github.com/pk1427/twitch-party-games",
-    live: "https://twitch-party-games.vercel.app/",
-    metrics: ["Realtime sessions", "Twitch extension", "Interactive gameplay"],
-  },
 ];
 
 export const TECHNOLOGIES = [
   "Solidity",
+  "EVM",
   "Chainlink",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "PostgreSQL",
-  "MongoDB",
-  "Wagmi",
-  "Hardhat",
-  "OpenZeppelin",
-  "Git",
   "Rust",
   "Anchor",
   "Solana",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Ethers.js",
+  "Wagmi",
+  "Node.js",
+  "PostgreSQL",
+  "MongoDB",
+  "Hardhat",
+  "OpenZeppelin",
+  "Git",
 ];
 
 export const CONTACT = {

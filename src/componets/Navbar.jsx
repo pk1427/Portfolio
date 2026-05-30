@@ -17,20 +17,22 @@ const Navbar = () => {
       initial={{ opacity: 0, y: -24 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="sticky top-0 z-50 py-5"
+      className="sticky top-0 z-50 py-3 sm:py-4"
     >
-      <nav className="flex items-center justify-between rounded-full border border-white/10 bg-slate-950/70 px-4 py-3 backdrop-blur-xl sm:px-6">
+      <nav className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-[#0c0d0b]/80 px-3 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:px-5">
         <a href="#about" aria-label="Home" className="flex items-center gap-3">
           <img
             src={logo}
-            className="h-11 w-11 rounded-full object-cover"
+            className="h-10 w-10 rounded-lg object-cover sm:h-11 sm:w-11"
             alt="Prasad Kapure logo"
           />
           <div className="hidden sm:block">
-            <p className="text-sm font-semibold uppercase tracking-[0.32em] text-slate-300">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-200">
               Prasad Kapure
             </p>
-            <p className="text-xs text-slate-500">Protocol-minded Web3 engineer</p>
+            <p className="text-xs text-slate-500">
+              Protocol developer | Smart contracts | Web3 apps
+            </p>
           </div>
         </a>
 
@@ -39,14 +41,14 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm text-slate-300 transition hover:text-white"
+              className="text-sm text-slate-300 transition hover:text-teal-100"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           {socials.map(({ href, icon: Icon, label }) => (
             <a
               key={label}
@@ -54,9 +56,9 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="rounded-full border border-white/10 bg-white/5 p-2.5 text-slate-300 transition hover:-translate-y-0.5 hover:border-sky-400/50 hover:text-white"
+              className="rounded-md border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:-translate-y-0.5 hover:border-teal-200/50 hover:bg-teal-200/10 hover:text-white sm:p-2.5"
             >
-              <Icon className="text-lg" />
+              <Icon className="text-base sm:text-lg" />
             </a>
           ))}
         </div>

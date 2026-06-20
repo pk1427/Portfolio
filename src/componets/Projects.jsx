@@ -126,7 +126,7 @@ const Projects = () => {
                       Delivery signal
                     </p>
                     <p className="mt-2 text-sm leading-6 text-slate-300">
-                      Built as a full product flow, not an isolated contract demo.
+                      {project.deliverySignal}
                     </p>
                   </div>
                 </div>
@@ -139,24 +139,30 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="mt-6 grid gap-3 min-[420px]:flex min-[420px]:flex-wrap">
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="primary-action"
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="secondary-action"
-                  >
-                    View Code
-                  </a>
-                </div>
+                {(project.live || project.github) && (
+                  <div className="mt-6 grid gap-3 min-[420px]:flex min-[420px]:flex-wrap">
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="primary-action"
+                      >
+                        Live Demo
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="secondary-action"
+                      >
+                        View Code
+                      </a>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </motion.article>

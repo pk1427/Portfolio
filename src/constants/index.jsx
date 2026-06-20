@@ -1,7 +1,9 @@
 import project3 from "../assets/projects/project-3.webp";
+import project4 from "../assets/projects/project-4.webp";
 import bharatMarketScreenshot from "../assets/projects/bharat-market-screenshot.png";
-import cryptoLotteryScreenshot from "../assets/projects/crypto-lottery-screenshot.png";
 import identifyMeScreenshot from "../assets/projects/identifyme-screenshot.png";
+
+import GrantFlowScreenshot from "../assets/projects/image.png";
 import resumePdf from "../Resume_27.pdf";
 
 export const NAV_LINKS = [
@@ -14,16 +16,17 @@ export const NAV_LINKS = [
 
 export const HERO_STATS = [
   { value: "5", label: "Protocol-style products" },
-  { value: "2", label: "EVM + Solana ecosystems" },
+  { value: "4", label: "EVM, Solana, Casper, Stellar" },
   { value: "CPMM", label: "Market engine implemented" },
 ];
 
 export const HERO_CONTENT = (
   <>
     I&apos;m a blockchain engineer building smart-contract systems, market
-    mechanisms, oracle workflows, and wallet-native product surfaces. My work
-    sits at the boundary of Solidity/Rust contracts, protocol UX, and production
-    frontend execution.
+    mechanisms, AI-verifiable funding infrastructure, oracle workflows, and
+    wallet-native product surfaces. My work sits at the boundary of protocol
+    design, Solidity/Rust contracts, settlement logic, and production frontend
+    execution.
   </>
 );
 
@@ -121,6 +124,8 @@ export const PROJECTS = [
       "CPMM pricing, YES/NO outcome tokens, liquidity pools, oracle resolution, wallet execution, USDC settlement",
     architecture:
       "Contracts handle market creation, collateralized trading, liquidity accounting, and resolution boundaries while the frontend keeps wallet actions and market state legible.",
+    deliverySignal:
+      "Built as protocol infrastructure where market outcomes settle through explicit contract and oracle boundaries.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -138,25 +143,35 @@ export const PROJECTS = [
     metrics: ["CPMM engine", "Polygon Amoy", "USDC flows"],
   },
   {
-    title: "CryptoLottery",
-    image: cryptoLotteryScreenshot,
-    accent: "from-violet-300 via-fuchsia-400 to-purple-500",
+    title: "GrantFlow AI",
+    image: GrantFlowScreenshot,
+    accent: "from-teal-300 via-cyan-400 to-emerald-400",
     description:
-      "Built a Solana lottery application with Anchor-backed program logic, wallet participation, transparent draw mechanics, and historical lottery tracking.",
+      "AI-verifiable funding protocol for milestone-based grants across multiple blockchains. Designed an agentic coordination layer where capital moves automatically when publicly verifiable work is completed.",
+    features:
+      "Milestone grants, escrow settlement, AI evidence verification, risk scoring, fraud signals, builder reputation",
     architecture:
-      "Program-first flow with account state, participant tracking, draw lifecycle handling, and a frontend tuned for wallet execution.",
+      "Smart contracts manage grant creation, milestone states, escrow boundaries, reputation primitives, and payment execution while AI verifier agents analyze GitHub repositories, deployment URLs, smart contracts, and documentation to produce confidence scores and signed attestations.",
+    deliverySignal:
+      "Built as ecosystem protocol infrastructure for funders, DAOs, accelerators, and public goods programs, not a standalone grant application.",
     technologies: [
-      "Solana",
-      "Rust",
-      "Anchor",
-      "React",
+      "Solidity",
       "TypeScript",
-      "Vite",
+      "Node.js",
+      "AI Agents",
+      "Escrow",
+      "Casper",
+      "Base",
+      "Stellar",
       "Web3.js",
     ],
-    github: "https://github.com/pk1427/Aa-Solana-lottery",
-    live: "https://lottery-solana-wine.vercel.app/",
-    metrics: ["Solana lottery", "Wallet flows", "Transparent mechanics"],
+    github: "https://github.com/pk1427/GrantFlow-Ai",
+    live: "https://grant-flow-ai-web.vercel.app/",
+    metrics: [
+      "Funding Protocol",
+      "AI Verification + Escrow",
+      "Casper -> Base -> Stellar",
+    ],
   },
   {
     title: "IdentifyMe",
@@ -166,6 +181,8 @@ export const PROJECTS = [
       "Built an on-chain identity product where users create, edit, and discover wallet-linked profiles with configurable visibility controls.",
     architecture:
       "Profile state and access rules live on-chain, while the app focuses on clear identity discovery and update flows.",
+    deliverySignal:
+      "Built as a wallet-native identity primitive with on-chain profile state and configurable access rules.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -187,6 +204,8 @@ export const PROJECTS = [
       "Built a Web3 fantasy sports product with NFT player cards, skill-based gameplay, token rewards, IPFS metadata, and wallet onboarding.",
     architecture:
       "ERC-721 assets, reward mechanics, metadata storage, and frontend wallet flows are composed into a game-like product loop.",
+    deliverySignal:
+      "Built as a full product flow around NFT ownership, metadata, and reward mechanics.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -206,6 +225,11 @@ export const TECHNOLOGIES = [
   "Solidity",
   "EVM",
   "Chainlink",
+  "AI Agents",
+  "Escrow",
+  "Casper",
+  "Base",
+  "Stellar",
   "Rust",
   "Anchor",
   "Solana",
@@ -223,7 +247,7 @@ export const TECHNOLOGIES = [
 ];
 
 export const CONTACT = {
-  address: "Gandhinagar, Gujarat 382421",
+  address: "Pune, Maharashtra, India",
   phoneNo: "+91-9657584288",
   email: "prasadkapure553@gmail.com",
   linkedin: "https://www.linkedin.com/in/prasad-kapure-9b5560240/",

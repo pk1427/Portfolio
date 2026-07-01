@@ -1,6 +1,6 @@
 import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import logo from "../assets/PkLogo.png";
 import { CONTACT, NAV_LINKS } from "../constants";
 
@@ -12,6 +12,8 @@ const socials = [
 ];
 
 const Navbar = () => {
+  const { scrollYProgress } = useScroll();
+
   return (
     <motion.header
       initial={{ opacity: 0, y: -24 }}
@@ -63,6 +65,10 @@ const Navbar = () => {
           ))}
         </div>
       </nav>
+      <motion.div
+        style={{ scaleX: scrollYProgress }}
+        className="mt-1.5 h-[2px] origin-left rounded-full bg-gradient-to-r from-teal-300 via-amber-200 to-teal-300 opacity-70"
+      />
     </motion.header>
   );
 };

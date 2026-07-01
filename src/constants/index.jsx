@@ -1,10 +1,9 @@
-import project3 from "../assets/projects/project-3.webp";
 import project4 from "../assets/projects/project-4.webp";
 import bharatMarketScreenshot from "../assets/projects/bharat-market-screenshot.png";
 import identifyMeScreenshot from "../assets/projects/identifyme-screenshot.png";
 
 import GrantFlowScreenshot from "../assets/projects/image.png";
-import resumePdf from "../Resume_27.pdf";
+import resumePdf from "../Prasad_Kapure_Resume.pdf";
 
 export const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -15,18 +14,19 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_STATS = [
-  { value: "5", label: "Protocol-style products" },
-  { value: "4", label: "EVM, Solana, Casper, Stellar" },
-  { value: "CPMM", label: "Market engine implemented" },
+  { value: "4", label: "Protocol-style products shipped" },
+  { value: "6", label: "Ethereum, Solana, Polygon, Casper, Base, Stellar" },
+  { value: "3+", label: "Domains: markets, treasury, funding, identity" },
 ];
 
 export const HERO_CONTENT = (
   <>
-    I&apos;m a blockchain engineer building smart-contract systems, market
-    mechanisms, AI-verifiable funding infrastructure, oracle workflows, and
-    wallet-native product surfaces. My work sits at the boundary of protocol
-    design, Solidity/Rust contracts, settlement logic, and production frontend
-    execution.
+    I&apos;m a protocol-minded blockchain engineer building production-grade
+    Web3 systems across Solana, EVM, and emerging multi-chain ecosystems —
+    smart contracts, DeFi protocols, prediction markets, oracle integrations,
+    multi-chain grant/escrow infrastructure, and treasury risk infrastructure.
+    My work sits at the boundary of protocol design, Solidity/Rust contracts,
+    settlement logic, and production frontend execution.
   </>
 );
 
@@ -50,20 +50,21 @@ export const PROTOCOL_PRINCIPLES = [
 
 export const EXPERIENCES = [
   {
-    year: "Sep 2025 - Present",
-    role: "Blockchain Developer Intern",
+    year: "Oct 2025 – Present",
+    role: "Blockchain Developer (Intern → Part-time)",
     company: "AppAvengers",
     companyUrl: "https://appavengers.com",
     description:
-      "Building Ethereum and Solana systems with contract logic, Anchor programs, and application flows designed around real user transactions.",
+      "Developed a decentralized lottery platform on Solana using Anchor and Rust with USDC-based participation, integrating Switchboard-powered randomness and automated winner selection. Contributed to an Aave-inspired DeFi lending prototype using Fhenix encryption on Ethereum, and researched liquidity aggregation and routing architectures within the Stellar ecosystem — progressing to part-time with independent research and architecture responsibilities.",
     technologies: [
       "Solidity",
       "Rust",
       "Anchor",
-      "TypeScript",
-      "React",
-      "Vite",
       "Solana",
+      "Switchboard",
+      "Fhenix",
+      "TypeScript",
+      "Stellar",
     ],
     current: true,
   },
@@ -73,23 +74,22 @@ export const EXPERIENCES = [
     company: "Finsocial Digital Systems",
     companyUrl: "https://finsocial.tech",
     description:
-      "Built DEX smart contracts for token swaps, SLTP, and futures trading, integrating Chainlink market data and PostgreSQL-backed trading workflows.",
+      "Built Solidity smart contracts powering token swaps, futures trading, and decentralized exchange workflows. Integrated multiple Chainlink price feeds for real-time market data, PnL tracking, and settlement calculations.",
     technologies: [
       "Solidity",
       "Hardhat",
-      "Remix",
       "OpenZeppelin",
-      "PostgreSQL",
       "Chainlink",
+      "PostgreSQL",
     ],
   },
   {
-    year: "Feb 2025 – May 2025",
+    year: "Mar 2025 – May 2025",
     role: "Blockchain Developer Intern",
     company: "Quadb Technologies",
     companyUrl: "https://quadbtech.com",
     description:
-      "Contributed to EVM-compatible infrastructure, RPC integration, agent logic, and modular contract architecture after in-house blockchain training.",
+      "Migrated Solana-oriented systems to EVM-compatible smart contract architecture, engineering modular Solidity contracts and RPC-based interaction layers across multiple modules.",
     technologies: ["Solidity", "TypeScript", "Web3.js", "Git", "EVM"],
   },
   {
@@ -115,8 +115,7 @@ export const PROJECTS = [
   {
     title: "BharatMarket",
     image: bharatMarketScreenshot,
-    featured: true,
-    tag: "Featured Project",
+    category: "Prediction Markets",
     accent: "from-amber-300 via-orange-400 to-red-500",
     description:
       "Designed and built a decentralized prediction market on Polygon Amoy where users trade YES/NO outcomes against a CPMM pricing model. The system combines wallet-based trading, liquidity provisioning, USDC flows, and Chainlink Functions for oracle-driven resolution.",
@@ -143,8 +142,35 @@ export const PROJECTS = [
     metrics: ["CPMM engine", "Polygon Amoy", "USDC flows"],
   },
   {
+    title: "TreasuryOS",
+    image: project4,
+    category: "Treasury & Risk",
+    accent: "from-violet-300 via-purple-400 to-fuchsia-500",
+    description:
+      "Built a multi-chain treasury monitoring platform that scans wallet holdings across multiple assets (ETH, WETH, USDC) to generate deterministic risk reports, modeling concentration and stress-test scenarios including stablecoin depeg simulations.",
+    features:
+      "Wallet risk scanning, concentration & stress-test modeling, on-chain attestation, treasury snapshot indexing",
+    architecture:
+      "An indexer and database architecture track treasury snapshots and attestation history over time, while on-chain attestation via KeeperHub publishes immutable, verifiable risk reports.",
+    deliverySignal:
+      "Built as treasury risk infrastructure for protocols and DAOs that need verifiable, on-chain reporting on multi-asset holdings.",
+    technologies: [
+      "Solidity",
+      "TypeScript",
+      "Next.js",
+      "Wagmi",
+      "PostgreSQL",
+      "Prisma",
+      "Ethereum (Sepolia)",
+    ],
+    github: "https://github.com/pk1427/treasuryos",
+    live: "https://treasuryos-web.vercel.app/",
+    metrics: ["Risk Engine", "Sepolia", "On-chain Attestation"],
+  },
+  {
     title: "GrantFlow AI",
     image: GrantFlowScreenshot,
+    category: "Funding Protocol",
     accent: "from-teal-300 via-cyan-400 to-emerald-400",
     description:
       "AI-verifiable funding protocol for milestone-based grants across multiple blockchains. Designed an agentic coordination layer where capital moves automatically when publicly verifiable work is completed.",
@@ -176,6 +202,7 @@ export const PROJECTS = [
   {
     title: "IdentifyMe",
     image: identifyMeScreenshot,
+    category: "Identity",
     accent: "from-cyan-300 via-sky-500 to-indigo-500",
     description:
       "Built an on-chain identity product where users create, edit, and discover wallet-linked profiles with configurable visibility controls.",
@@ -196,29 +223,6 @@ export const PROJECTS = [
     live: "https://identity-dapp.vercel.app/",
     metrics: ["Identity graph", "On-chain profiles", "Access controls"],
   },
-  {
-    title: "FantasyX",
-    image: project3,
-    accent: "from-emerald-300 via-teal-400 to-cyan-500",
-    description:
-      "Built a Web3 fantasy sports product with NFT player cards, skill-based gameplay, token rewards, IPFS metadata, and wallet onboarding.",
-    architecture:
-      "ERC-721 assets, reward mechanics, metadata storage, and frontend wallet flows are composed into a game-like product loop.",
-    deliverySignal:
-      "Built as a full product flow around NFT ownership, metadata, and reward mechanics.",
-    technologies: [
-      "Solidity",
-      "Hardhat",
-      "ERC-721",
-      "IPFS",
-      "React.js",
-      "Wagmi",
-      "RainbowKit",
-    ],
-    github: "https://github.com/pk1427/FantasyX",
-    live: "https://fantasyx-frontend.vercel.app/",
-    metrics: ["NFT gameplay", "Wallet auth", "Reward mechanics"],
-  },
 ];
 
 export const TECHNOLOGIES = [
@@ -233,14 +237,27 @@ export const TECHNOLOGIES = [
   "Rust",
   "Anchor",
   "Solana",
+  "SPL Token",
+  "Switchboard",
+  "Fhenix",
+  "Polygon",
+  "USDC",
+  "ERC-721",
   "TypeScript",
+  "JavaScript",
+  "SQL",
   "React",
   "Next.js",
   "Ethers.js",
+  "Web3.js",
   "Wagmi",
+  "RainbowKit",
   "Node.js",
+  "Express.js",
+  "Prisma",
   "PostgreSQL",
   "MongoDB",
+  "IPFS",
   "Hardhat",
   "OpenZeppelin",
   "Git",

@@ -11,20 +11,26 @@ import {
   SiOpenzeppelin,
   SiPolygon,
   SiPostgresql,
+  SiPrisma,
   SiRust,
   SiSolana,
   SiSolidity,
+  SiStellar,
   SiTypescript,
   SiVite,
   SiWalletconnect,
 } from "react-icons/si";
 import {
-  LuActivity,
   LuCoins,
   LuDatabase,
+  LuDice5,
+  LuFingerprint,
+  LuLandmark,
   LuLayers,
+  LuLock,
   LuNetwork,
   LuShieldCheck,
+  LuTrendingUp,
   LuWallet,
 } from "react-icons/lu";
 import { TbHammer } from "react-icons/tb";
@@ -33,22 +39,28 @@ import { motion } from "framer-motion";
 
 const protocolFocus = [
   {
-    icon: SiPolygon,
-    label: "BharatMarket",
-    detail: "Polygon Amoy prediction market with CPMM pricing and USDC flows",
-    color: "text-violet-300",
-  },
-  {
-    icon: LuActivity,
-    label: "Market mechanics",
-    detail: "YES/NO trading, liquidity accounting, outcome resolution",
+    icon: LuTrendingUp,
+    label: "Prediction Markets",
+    detail: "BharatMarket: Polygon CPMM pricing, YES/NO trading, oracle resolution",
     color: "text-amber-200",
   },
   {
-    icon: SiChainlink,
-    label: "Oracle layer",
-    detail: "Chainlink Functions and market data driven settlement paths",
-    color: "text-blue-300",
+    icon: LuLandmark,
+    label: "Treasury & Risk",
+    detail: "TreasuryOS: multi-asset risk scanning with on-chain attestation",
+    color: "text-violet-300",
+  },
+  {
+    icon: LuCoins,
+    label: "Funding Protocols",
+    detail: "GrantFlow AI: milestone escrow with AI-verified evidence",
+    color: "text-teal-300",
+  },
+  {
+    icon: LuFingerprint,
+    label: "Identity",
+    detail: "IdentifyMe: wallet-linked profiles with on-chain access control",
+    color: "text-cyan-300",
   },
 ];
 
@@ -60,6 +72,8 @@ const skillGroups = [
       { icon: SiEthereum, label: "Ethereum", note: "EVM contracts", color: "text-slate-100" },
       { icon: SiSolana, label: "Solana", note: "Anchor programs", color: "text-emerald-300" },
       { icon: SiPolygon, label: "Polygon", note: "BharatMarket", color: "text-violet-300" },
+      { icon: SiStellar, label: "Stellar", note: "Liquidity routing research", color: "text-sky-300" },
+      { icon: LuLandmark, label: "Casper / Base", note: "GrantFlow multi-chain rails", color: "text-cyan-200" },
       { icon: LuCoins, label: "USDC rails", note: "Stablecoin flows", color: "text-amber-200" },
     ],
   },
@@ -71,6 +85,8 @@ const skillGroups = [
       { icon: SiRust, label: "Rust", note: "Solana logic", color: "text-orange-300" },
       { icon: TbHammer, label: "Hardhat", note: "Testing + deploys", color: "text-yellow-200" },
       { icon: SiOpenzeppelin, label: "OpenZeppelin", note: "Secure primitives", color: "text-indigo-300" },
+      { icon: LuDice5, label: "Switchboard", note: "Verifiable randomness", color: "text-fuchsia-300" },
+      { icon: LuLock, label: "Fhenix", note: "Encrypted DeFi lending", color: "text-purple-300" },
     ],
   },
   {
@@ -93,7 +109,8 @@ const skillGroups = [
       { icon: SiVite, label: "Vite", note: "Fast builds", color: "text-purple-300" },
       { icon: DiNodejsSmall, label: "Node.js", note: "APIs + services", color: "text-green-300" },
       { icon: SiExpress, label: "Express", note: "Backend routes", color: "text-slate-200" },
-      { icon: SiPostgresql, label: "PostgreSQL", note: "Trading data", color: "text-sky-300" },
+      { icon: SiPostgresql, label: "PostgreSQL", note: "Trading + treasury data", color: "text-sky-300" },
+      { icon: SiPrisma, label: "Prisma", note: "TreasuryOS indexer", color: "text-slate-100" },
       { icon: SiMongodb, label: "MongoDB", note: "App storage", color: "text-emerald-300" },
       { icon: SiIpfs, label: "IPFS", note: "NFT metadata", color: "text-teal-300" },
       { icon: SiGit, label: "Git", note: "Team workflow", color: "text-orange-300" },
@@ -150,12 +167,14 @@ const Technologies = () => {
                 Current build thesis
               </p>
               <p className="mt-3 text-sm leading-6 text-slate-300 sm:leading-7">
-                BharatMarket ties the stack together: Polygon contracts,
-                Chainlink-backed resolution, stablecoin settlement, and a
-                frontend that explains protocol state before the user signs.
+                Every build ties the same three layers together: contracts
+                that encode the rules, an oracle or attestation layer that
+                keeps state trustworthy, and a frontend that explains what&apos;s
+                happening before the user signs — whether that&apos;s a market,
+                a treasury report, or a funding milestone.
               </p>
               <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
-                {["Polygon", "Chainlink", "USDC"].map((item) => (
+                {["Contracts", "Attestation", "Wallet UX"].map((item) => (
                   <div
                     key={item}
                     className="rounded-md border border-white/10 bg-black/20 px-2 py-2 text-center text-[11px] font-semibold text-slate-200 sm:px-3 sm:text-xs"

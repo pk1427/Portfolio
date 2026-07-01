@@ -1,5 +1,7 @@
+import { useMemo, useState } from "react";
 import { PROJECTS } from "../constants/index";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { LuLayoutGrid } from "react-icons/lu";
 
 const renderProjectPreview = (project, className = "aspect-[16/10]") => {
   if (project.preview === "live") {
@@ -50,6 +52,17 @@ const renderWindowFrame = (
 );
 
 const Projects = () => {
+  const categories = useMemo(
+    () => ["All", ...new Set(PROJECTS.map((project) => project.category))],
+    []
+  );
+  const [activeCategory, setActiveCategory] = useState("All");
+
+  const visibleProjects =
+    activeCategory === "All"
+      ? PROJECTS
+      : PROJECTS.filter((project) => project.category === activeCategory);
+
   return (
     <section id="projects" className="section-shell">
       <motion.div
@@ -60,7 +73,7 @@ const Projects = () => {
       >
         <span className="section-kicker">Selected Work</span>
         <h2 className="section-title max-w-3xl">
-          Case studies in markets, identity, rewards, and realtime systems.
+          Case studies across markets, treasury, funding, and identity.
         </h2>
         <p className="section-copy max-w-3xl">
           Each project is framed by the engineering problem it solves: contract
@@ -69,104 +82,131 @@ const Projects = () => {
         </p>
       </motion.div>
 
-      <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5">
-        {PROJECTS.map((project, index) => (
-          <motion.article
-            key={project.title}
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 36 }}
-            transition={{ duration: 0.55, delay: index * 0.08 }}
-            className="group overflow-hidden rounded-lg border border-white/10 bg-[#10120f]/75 shadow-[0_20px_75px_rgba(0,0,0,0.32)] transition duration-300 hover:-translate-y-1 hover:border-teal-200/25"
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 16 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="mt-8 flex flex-wrap gap-2 sm:mt-10"
+      >
+        {categories.map((category) => (
+          <button
+            key={category}
+            type="button"
+            onClick={() => setActiveCategory(category)}
+            className={`inline-flex items-center gap-1.5 rounded-md border px-3.5 py-2 text-xs font-medium uppercase tracking-[0.16em] transition sm:text-[13px] sm:tracking-[0.2em] ${
+              activeCategory === category
+                ? "border-teal-200/50 bg-teal-200/15 text-teal-100"
+                : "border-white/10 bg-white/[0.03] text-slate-400 hover:border-white/20 hover:text-slate-200"
+            }`}
           >
-            <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
-              <div className="relative p-3 sm:p-5">
-                <div
-                  className={`absolute inset-x-0 top-0 h-28 bg-gradient-to-br ${project.accent} opacity-15`}
-                />
-                {renderWindowFrame(
-                  renderProjectPreview(project, "aspect-[16/9]"),
-                  "Build Preview",
-                  "relative"
-                )}
-              </div>
-
-              <div className="flex flex-col px-3 pb-5 pt-0 sm:px-5 sm:pb-6 lg:py-5 lg:pl-0 lg:pr-5">
-                <div className="flex flex-wrap gap-2">
-                  {project.tag && (
-                    <span className="rounded-md border border-amber-200/25 bg-amber-200/10 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-100 sm:py-2 sm:text-xs sm:tracking-[0.24em]">
-                      {project.tag}
-                    </span>
-                  )}
-                  {project.metrics?.map((metric) => (
-                    <span key={metric} className="chip text-xs">
-                      {metric}
-                    </span>
-                  ))}
-                </div>
-
-                <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">
-                  {project.title}
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-slate-400 sm:leading-7">
-                  {project.description}
-                </p>
-
-                <div className="mt-4 grid gap-3 md:grid-cols-[1fr_0.72fr]">
-                  <div className="rounded-lg border border-white/10 bg-white/[0.03] p-3">
-                    <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
-                      Architecture
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">
-                      {project.architecture}
-                    </p>
-                  </div>
-
-                  <div className="rounded-lg border border-teal-200/15 bg-teal-200/10 p-3">
-                    <p className="text-[11px] uppercase tracking-[0.24em] text-teal-100">
-                      Delivery signal
-                    </p>
-                    <p className="mt-2 text-sm leading-6 text-slate-300">
-                      {project.deliverySignal}
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span key={tech} className="chip text-xs">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {(project.live || project.github) && (
-                  <div className="mt-6 grid gap-3 min-[420px]:flex min-[420px]:flex-wrap">
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="primary-action"
-                      >
-                        Live Demo
-                      </a>
-                    )}
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="secondary-action"
-                      >
-                        View Code
-                      </a>
-                    )}
-                  </div>
-                )}
-              </div>
-            </div>
-          </motion.article>
+            {category === "All" && <LuLayoutGrid className="text-sm" />}
+            {category}
+          </button>
         ))}
+      </motion.div>
+
+      <div className="mt-6 grid gap-4 sm:mt-8 sm:gap-5">
+        <AnimatePresence mode="popLayout">
+          {visibleProjects.map((project, index) => (
+            <motion.article
+              key={project.title}
+              layout
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 36 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
+              className="group overflow-hidden rounded-lg border border-white/10 bg-[#10120f]/75 shadow-[0_20px_75px_rgba(0,0,0,0.32)] transition duration-300 hover:-translate-y-1 hover:border-teal-200/25"
+            >
+              <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
+                <div className="relative p-3 sm:p-5">
+                  <div
+                    className={`absolute inset-x-0 top-0 h-28 bg-gradient-to-br ${project.accent} opacity-15`}
+                  />
+                  {renderWindowFrame(
+                    renderProjectPreview(project, "aspect-[16/9]"),
+                    "Build Preview",
+                    "relative"
+                  )}
+                </div>
+
+                <div className="flex flex-col px-3 pb-5 pt-0 sm:px-5 sm:pb-6 lg:py-5 lg:pl-0 lg:pr-5">
+                  <div className="flex flex-wrap gap-2">
+                    {project.category && (
+                      <span className="rounded-md border border-amber-200/25 bg-amber-200/10 px-3 py-1.5 text-[10px] font-medium uppercase tracking-[0.18em] text-amber-100 sm:py-2 sm:text-xs sm:tracking-[0.24em]">
+                        {project.category}
+                      </span>
+                    )}
+                    {project.metrics?.map((metric) => (
+                      <span key={metric} className="chip text-xs">
+                        {metric}
+                      </span>
+                    ))}
+                  </div>
+
+                  <h3 className="mt-4 text-2xl font-semibold text-white sm:text-3xl">
+                    {project.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-6 text-slate-400 sm:leading-7">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-4 grid gap-3 md:grid-cols-[1fr_0.72fr]">
+                    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-3">
+                      <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
+                        Architecture
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-slate-300">
+                        {project.architecture}
+                      </p>
+                    </div>
+
+                    <div className="rounded-lg border border-teal-200/15 bg-teal-200/10 p-3">
+                      <p className="text-[11px] uppercase tracking-[0.24em] text-teal-100">
+                        Delivery signal
+                      </p>
+                      <p className="mt-2 text-sm leading-6 text-slate-300">
+                        {project.deliverySignal}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span key={tech} className="chip text-xs">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {(project.live || project.github) && (
+                    <div className="mt-6 grid gap-3 min-[420px]:flex min-[420px]:flex-wrap">
+                      {project.live && (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="primary-action"
+                        >
+                          Live Demo
+                        </a>
+                      )}
+                      {project.github && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="secondary-action"
+                        >
+                          View Code
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </motion.article>
+          ))}
+        </AnimatePresence>
       </div>
     </section>
   );

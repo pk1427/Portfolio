@@ -119,7 +119,7 @@ const Hero = () => {
                     Active focus
                   </p>
                   <p className="mt-1 text-xs font-medium leading-5 text-white sm:text-sm">
-                    Market mechanisms, oracle resolution, wallet-safe UX
+                    Markets, treasury risk, funding infra, wallet-safe UX
                   </p>
                 </div>
                 <span className="shrink-0 rounded-md border border-emerald-300/30 bg-emerald-300/10 px-2.5 py-1 text-[11px] font-medium text-emerald-100 sm:px-3 sm:text-xs">

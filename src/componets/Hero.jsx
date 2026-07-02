@@ -38,7 +38,7 @@ const childVariants = {
 
 const Hero = () => {
   return (
-    <section id="about" className="pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-28 lg:pt-14">
+    <section id="about" className="relative pb-16 pt-8 sm:pb-20 sm:pt-10 lg:pb-28 lg:pt-14">
       <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.35fr)_minmax(360px,0.65fr)] xl:grid-cols-[minmax(0,1.42fr)_minmax(380px,0.58fr)]">
         <div>
           <motion.div
@@ -51,14 +51,14 @@ const Hero = () => {
               variants={childVariants}
               className="mb-5 inline-flex max-w-full items-center rounded-md border border-amber-200/25 bg-amber-200/10 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-amber-100 sm:mb-6 sm:px-4 sm:text-xs sm:tracking-[0.28em]"
             >
-              Senior protocol developer direction
+              Blockchain developer
             </motion.span>
 
             <motion.h1
               variants={childVariants}
               className="max-w-5xl text-[42px] font-semibold leading-[1.02] text-white min-[420px]:text-5xl sm:text-6xl lg:text-[72px] xl:text-[82px]"
             >
-              Building markets, infra, and dApps with protocol-grade execution.
+              Building smart contracts, dApps, and Web3 tooling.
             </motion.h1>
 
             <motion.p
@@ -90,12 +90,12 @@ const Hero = () => {
 
             <motion.div
               variants={childVariants}
-              className="mt-10 grid w-full gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4"
+            className="mt-10 grid w-full gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4"
             >
               {HERO_STATS.map((stat) => (
                 <div
                   key={stat.label}
-                  className="rounded-lg border border-white/10 bg-[#10120f]/75 p-4 text-left shadow-[0_18px_65px_rgba(0,0,0,0.25)] sm:p-5"
+                  className="rounded-lg border border-white/10 bg-[#10120f]/75 p-4 text-left shadow-[0_18px_65px_rgba(0,0,0,0.25)] transition hover:-translate-y-0.5 hover:border-teal-200/25 hover:bg-[#121711]/80 sm:p-5"
                 >
                   <p className="text-2xl font-semibold text-white">{stat.value}</p>
                   <p className="mt-2 text-sm text-slate-400">{stat.label}</p>
@@ -112,14 +112,14 @@ const Hero = () => {
             transition={{ duration: 0.9, delay: 0.2 }}
             className="relative mx-auto w-full max-w-[390px] sm:max-w-[420px] lg:ml-auto"
           >
-            <div className="relative overflow-hidden rounded-lg border border-white/10 bg-[#10120f]/85 p-3 shadow-[0_28px_90px_rgba(0,0,0,0.5)] sm:p-4">
+            <div className="relative overflow-hidden rounded-lg border border-white/10 bg-[#10120f]/85 p-3 shadow-[0_28px_90px_rgba(0,0,0,0.5)] ring-1 ring-white/[0.03] sm:p-4">
               <div className="mb-3 flex items-start justify-between gap-3 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-3 sm:mb-4 sm:items-center sm:px-4">
                 <div>
                   <p className="text-xs uppercase tracking-[0.3em] text-slate-500">
                     Active focus
                   </p>
                   <p className="mt-1 text-xs font-medium leading-5 text-white sm:text-sm">
-                    Markets, treasury risk, funding infra, wallet-safe UX
+                    DeFi, prediction markets, treasury tools, grants, identity
                   </p>
                 </div>
                 <span className="shrink-0 rounded-md border border-emerald-300/30 bg-emerald-300/10 px-2.5 py-1 text-[11px] font-medium text-emerald-100 sm:px-3 sm:text-xs">
@@ -143,15 +143,15 @@ const Hero = () => {
                     Strength
                   </p>
                   <p className="mt-2 text-sm text-slate-200">
-                    Smart contracts + frontend execution in one workflow.
+                    Smart contracts, frontends, and backend services in one workflow.
                   </p>
                 </div>
                 <div className="rounded-lg border border-white/10 bg-white/[0.045] p-4">
                   <p className="text-xs uppercase tracking-[0.28em] text-slate-500">
-                    Builder mode
+                    Working style
                   </p>
                   <p className="mt-2 text-sm text-slate-200">
-                    Product UX shaped around protocol mechanics.
+                    Clear transaction flows and practical on-chain data handling.
                   </p>
                 </div>
               </div>
@@ -172,7 +172,7 @@ const Hero = () => {
             className="rounded-lg border border-white/10 bg-[#10120f]/70 p-5 transition hover:border-teal-200/25 hover:bg-[#121711]/80"
           >
             <p className="text-xs uppercase tracking-[0.28em] text-slate-500">
-              Principle {index + 1}
+              Approach {index + 1}
             </p>
             <h2 className="mt-4 text-xl font-semibold text-white">
               {principle.title}

@@ -1,0 +1,74 @@
+<svg width="1900" height="970" viewBox="0 0 1900 970" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1900" height="970" fill="#070A0D"/>
+  <rect x="54" y="48" width="1792" height="874" rx="34" fill="#0C1116" stroke="#20303A" stroke-width="2"/>
+  <rect x="91" y="91" width="1720" height="96" rx="24" fill="#101821" stroke="#263845"/>
+  <text x="132" y="143" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">TreasuryOS</text>
+  <text x="132" y="170" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18">Treasury monitoring, stress tests, and on-chain attestations</text>
+  <rect x="1450" y="116" width="312" height="46" rx="14" fill="#10251F" stroke="#2DD4BF" stroke-opacity="0.45"/>
+  <circle cx="1480" cy="139" r="7" fill="#34D399"/>
+  <text x="1500" y="146" fill="#CCFBF1" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">Sepolia wallet connected</text>
+
+  <rect x="91" y="222" width="525" height="238" rx="24" fill="#10161D" stroke="#263845"/>
+  <text x="132" y="272" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">TOTAL TREASURY VALUE</text>
+  <text x="132" y="344" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800">$284,620</text>
+  <text x="132" y="383" fill="#A7F3D0" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">+3.8% since last snapshot</text>
+  <rect x="132" y="412" width="405" height="14" rx="7" fill="#1F2937"/>
+  <rect x="132" y="412" width="214" height="14" rx="7" fill="#2DD4BF"/>
+  <rect x="346" y="412" width="126" height="14" fill="#60A5FA"/>
+  <rect x="472" y="412" width="65" height="14" rx="7" fill="#FBBF24"/>
+
+  <rect x="645" y="222" width="560" height="238" rx="24" fill="#10161D" stroke="#263845"/>
+  <text x="686" y="272" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">ASSET HOLDINGS</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">
+    <text x="686" y="332" fill="#E2E8F0">ETH</text>
+    <text x="1038" y="332" fill="#F8FAFC" text-anchor="end">72.42</text>
+    <text x="1112" y="332" fill="#94A3B8" text-anchor="end">51%</text>
+    <text x="686" y="382" fill="#E2E8F0">USDC</text>
+    <text x="1038" y="382" fill="#F8FAFC" text-anchor="end">96,180</text>
+    <text x="1112" y="382" fill="#94A3B8" text-anchor="end">34%</text>
+    <text x="686" y="432" fill="#E2E8F0">WETH</text>
+    <text x="1038" y="432" fill="#F8FAFC" text-anchor="end">21.07</text>
+    <text x="1112" y="432" fill="#94A3B8" text-anchor="end">15%</text>
+  </g>
+  <g stroke-width="10" stroke-linecap="round">
+    <line x1="805" y1="324" x2="997" y2="324" stroke="#2DD4BF"/>
+    <line x1="805" y1="374" x2="933" y2="374" stroke="#60A5FA"/>
+    <line x1="805" y1="424" x2="865" y2="424" stroke="#FBBF24"/>
+  </g>
+
+  <rect x="1234" y="222" width="577" height="238" rx="24" fill="#10161D" stroke="#263845"/>
+  <text x="1275" y="272" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">RISK REPORT</text>
+  <rect x="1275" y="303" width="196" height="56" rx="16" fill="#17251F" stroke="#22C55E" stroke-opacity="0.45"/>
+  <text x="1298" y="339" fill="#BBF7D0" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Healthy</text>
+  <rect x="1494" y="303" width="236" height="56" rx="16" fill="#251E12" stroke="#F59E0B" stroke-opacity="0.45"/>
+  <text x="1517" y="339" fill="#FDE68A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">USDC watch</text>
+  <text x="1275" y="398" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">Largest exposure: ETH at 51%</text>
+  <text x="1275" y="432" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">Last report attested 14 minutes ago</text>
+
+  <rect x="91" y="494" width="824" height="335" rx="24" fill="#10161D" stroke="#263845"/>
+  <text x="132" y="544" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">STABLECOIN DEPEG SIMULATION</text>
+  <polyline points="132,750 214,724 296,704 378,678 460,632 542,610 624,573 706,556 788,520 870,511" stroke="#2DD4BF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <polyline points="132,725 214,720 296,713 378,707 460,705 542,703 624,699 706,695 788,690 870,686" stroke="#FBBF24" stroke-width="6" stroke-linecap="round" stroke-dasharray="14 18"/>
+  <g stroke="#334155" stroke-width="2">
+    <line x1="132" y1="785" x2="870" y2="785"/>
+    <line x1="132" y1="632" x2="870" y2="632"/>
+    <line x1="132" y1="520" x2="870" y2="520"/>
+  </g>
+  <text x="132" y="811" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18">Snapshot history</text>
+  <text x="650" y="811" fill="#5EEAD4" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Base case</text>
+  <text x="776" y="811" fill="#FDE68A" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">USDC -8%</text>
+
+  <rect x="949" y="494" width="862" height="335" rx="24" fill="#10161D" stroke="#263845"/>
+  <text x="990" y="544" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">ATTESTATION HISTORY</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="990" y="581" width="780" height="58" rx="16" fill="#0B1218" stroke="#22313B"/>
+    <text x="1022" y="617" fill="#F8FAFC" font-size="20" font-weight="700">Risk report #128</text>
+    <text x="1608" y="617" fill="#A7F3D0" font-size="18" font-weight="700">attested</text>
+    <rect x="990" y="658" width="780" height="58" rx="16" fill="#0B1218" stroke="#22313B"/>
+    <text x="1022" y="694" fill="#F8FAFC" font-size="20" font-weight="700">Treasury snapshot</text>
+    <text x="1584" y="694" fill="#A7F3D0" font-size="18" font-weight="700">confirmed</text>
+    <rect x="990" y="735" width="780" height="58" rx="16" fill="#0B1218" stroke="#22313B"/>
+    <text x="1022" y="771" fill="#F8FAFC" font-size="20" font-weight="700">KeeperHub record</text>
+    <text x="1558" y="771" fill="#93C5FD" font-size="18" font-weight="700">0x8f3...29b</text>
+  </g>
+</svg>

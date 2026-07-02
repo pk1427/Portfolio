@@ -1,6 +1,6 @@
-import project4 from "../assets/projects/project-4.webp";
 import bharatMarketScreenshot from "../assets/projects/bharat-market-screenshot.png";
 import identifyMeScreenshot from "../assets/projects/identifyme-screenshot.png";
+import treasuryOsPreview from "../assets/projects/treasuryos-preview.svg";
 
 import GrantFlowScreenshot from "../assets/projects/image.png";
 import resumePdf from "../Prasad_Kapure_Resume.pdf";
@@ -14,37 +14,34 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_STATS = [
-  { value: "4", label: "Protocol-style products shipped" },
+  { value: "4", label: "Main Web3 projects built" },
   { value: "6", label: "Ethereum, Solana, Polygon, Casper, Base, Stellar" },
   { value: "3+", label: "Domains: markets, treasury, funding, identity" },
 ];
 
 export const HERO_CONTENT = (
   <>
-    I&apos;m a protocol-minded blockchain engineer building production-grade
-    Web3 systems across Solana, EVM, and emerging multi-chain ecosystems —
-    smart contracts, DeFi protocols, prediction markets, oracle integrations,
-    multi-chain grant/escrow infrastructure, and treasury risk infrastructure.
-    My work sits at the boundary of protocol design, Solidity/Rust contracts,
-    settlement logic, and production frontend execution.
+    Early-career blockchain developer with internship and part-time experience
+    across smart contracts, dApps, wallet flows, oracle integrations, and backend
+    systems. Work spans Solana, Ethereum, Polygon, Casper, Base, and Stellar.
   </>
 );
 
 export const PROTOCOL_PRINCIPLES = [
   {
-    title: "Mechanism design",
+    title: "Clear contract rules",
     description:
-      "Pricing, liquidity, rewards, resolution, and user incentives are modeled as product-critical protocol behavior.",
+      "On-chain logic is easier to trust when roles, state changes, and fund movement are simple enough to review.",
   },
   {
-    title: "Security posture",
+    title: "Practical testing",
     description:
-      "Contract flows are built with explicit assumptions, access boundaries, deterministic state transitions, and testable failure paths.",
+      "The highest-risk paths get the most attention: permissions, settlement, failed transactions, and stale data.",
   },
   {
-    title: "Production UX",
+    title: "Usable wallet flows",
     description:
-      "Wallet actions, pending states, network handling, and data freshness are treated as core protocol surfaces.",
+      "A dApp should explain what the user is signing, what changed on-chain, and what to do when a transaction fails.",
   },
 ];
 
@@ -55,7 +52,7 @@ export const EXPERIENCES = [
     company: "AppAvengers",
     companyUrl: "https://appavengers.com",
     description:
-      "Developed a decentralized lottery platform on Solana using Anchor and Rust with USDC-based participation, integrating Switchboard-powered randomness and automated winner selection. Contributed to an Aave-inspired DeFi lending prototype using Fhenix encryption on Ethereum, and researched liquidity aggregation and routing architectures within the Stellar ecosystem — progressing to part-time with independent research and architecture responsibilities.",
+      "Completed a 6-month blockchain developer internship and continued part-time. Built smart contract and dApp features across Solana and EVM projects, including a Solana lottery using Anchor, Rust, USDC flows, and Switchboard randomness. Also contributed to DeFi research and frontend/backend integration work where contract behavior needed to be clear in the product.",
     technologies: [
       "Solidity",
       "Rust",
@@ -74,7 +71,7 @@ export const EXPERIENCES = [
     company: "Finsocial Digital Systems",
     companyUrl: "https://finsocial.tech",
     description:
-      "Built Solidity smart contracts powering token swaps, futures trading, and decentralized exchange workflows. Integrated multiple Chainlink price feeds for real-time market data, PnL tracking, and settlement calculations.",
+      "Worked on Solidity contracts for token swaps, futures trading, and exchange-style flows. Integrated Chainlink price feeds for market data, PnL tracking, and settlement calculations.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -89,7 +86,7 @@ export const EXPERIENCES = [
     company: "Quadb Technologies",
     companyUrl: "https://quadbtech.com",
     description:
-      "Migrated Solana-oriented systems to EVM-compatible smart contract architecture, engineering modular Solidity contracts and RPC-based interaction layers across multiple modules.",
+      "Worked on Web3 development tasks involving Solidity contracts, RPC-based interactions, and dApp integration. Gained more practice translating product requirements into contract calls and frontend flows.",
     technologies: ["Solidity", "TypeScript", "Web3.js", "Git", "EVM"],
   },
   {
@@ -98,7 +95,7 @@ export const EXPERIENCES = [
     company: "Brandlane",
     companyUrl: "https://brandlane.in/",
     description:
-      "Delivered responsive production pages, launched company and careers experiences, and supported deployments with reliability-focused execution.",
+      "Built responsive web pages, supported company and careers site work, and helped with deployment tasks. This role strengthened my frontend and full-stack fundamentals before I moved deeper into blockchain development.",
     technologies: [
       "React.js",
       "SCSS",
@@ -118,13 +115,13 @@ export const PROJECTS = [
     category: "Prediction Markets",
     accent: "from-amber-300 via-orange-400 to-red-500",
     description:
-      "Designed and built a decentralized prediction market on Polygon Amoy where users trade YES/NO outcomes against a CPMM pricing model. The system combines wallet-based trading, liquidity provisioning, USDC flows, and Chainlink Functions for oracle-driven resolution.",
+      "BharatMarket is a prediction market on Polygon Amoy where users trade YES/NO outcomes with USDC. It uses a CPMM pricing model so prices move with liquidity and demand, and Chainlink Functions helps resolve markets from external data.",
     features:
       "CPMM pricing, YES/NO outcome tokens, liquidity pools, oracle resolution, wallet execution, USDC settlement",
     architecture:
-      "Contracts handle market creation, collateralized trading, liquidity accounting, and resolution boundaries while the frontend keeps wallet actions and market state legible.",
+      "Smart contracts handle market creation, trading, liquidity accounting, and settlement. A PostgreSQL and Prisma indexer stores market data, user positions, and activity so the frontend can load quickly without reading every state change on-chain.",
     deliverySignal:
-      "Built as protocol infrastructure where market outcomes settle through explicit contract and oracle boundaries.",
+      "The main lesson was how much detail goes into financial UX: prices, pending transactions, position changes, and resolution status all need to be obvious before users sign.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -143,17 +140,17 @@ export const PROJECTS = [
   },
   {
     title: "TreasuryOS",
-    image: project4,
+    image: treasuryOsPreview,
     category: "Treasury & Risk",
     accent: "from-violet-300 via-purple-400 to-fuchsia-500",
     description:
-      "Built a multi-chain treasury monitoring platform that scans wallet holdings across multiple assets (ETH, WETH, USDC) to generate deterministic risk reports, modeling concentration and stress-test scenarios including stablecoin depeg simulations.",
+      "TreasuryOS helps teams track ETH, WETH, and USDC holdings and understand basic treasury risk. It turns wallet balances into snapshots, reports, and stress tests instead of leaving users to inspect everything manually.",
     features:
       "Wallet risk scanning, concentration & stress-test modeling, on-chain attestation, treasury snapshot indexing",
     architecture:
-      "An indexer and database architecture track treasury snapshots and attestation history over time, while on-chain attestation via KeeperHub publishes immutable, verifiable risk reports.",
+      "The backend stores treasury snapshots and attestation history over time. The risk engine uses those snapshots for concentration checks and stablecoin depeg simulations, while KeeperHub records review attestations on-chain.",
     deliverySignal:
-      "Built as treasury risk infrastructure for protocols and DAOs that need verifiable, on-chain reporting on multi-asset holdings.",
+      "The main lesson was that raw chain data is only useful when it is organized for decisions. The harder part was making reports clear enough for a team to act on.",
     technologies: [
       "Solidity",
       "TypeScript",
@@ -168,23 +165,22 @@ export const PROJECTS = [
     metrics: ["Risk Engine", "Sepolia", "On-chain Attestation"],
   },
   {
-    title: "GrantFlow AI",
+    title: "GrantFlow",
     image: GrantFlowScreenshot,
-    category: "Funding Protocol",
+    category: "Grant Funding",
     accent: "from-teal-300 via-cyan-400 to-emerald-400",
     description:
-      "AI-verifiable funding protocol for milestone-based grants across multiple blockchains. Designed an agentic coordination layer where capital moves automatically when publicly verifiable work is completed.",
+      "GrantFlow is a milestone-based grant funding system. It lets grant creators define milestones, hold funds in escrow, validate progress, and release payments in stages.",
     features:
-      "Milestone grants, escrow settlement, AI evidence verification, risk scoring, fraud signals, builder reputation",
+      "Milestone grants, escrow settlement, grant creation, milestone validation, controlled fund releases",
     architecture:
-      "Smart contracts manage grant creation, milestone states, escrow boundaries, reputation primitives, and payment execution while AI verifier agents analyze GitHub repositories, deployment URLs, smart contracts, and documentation to produce confidence scores and signed attestations.",
+      "The first version was built on Casper, with planned integrations for Base and Stellar. The contract layer manages grant state, escrowed funds, milestone status, and payment releases, while the frontend separates creator and recipient workflows.",
     deliverySignal:
-      "Built as ecosystem protocol infrastructure for funders, DAOs, accelerators, and public goods programs, not a standalone grant application.",
+      "This project helped me think through trust boundaries. Some grant workflows need human review, but contracts can still make fund handling clearer and harder to misuse.",
     technologies: [
       "Solidity",
       "TypeScript",
       "Node.js",
-      "AI Agents",
       "Escrow",
       "Casper",
       "Base",
@@ -194,8 +190,8 @@ export const PROJECTS = [
     github: "https://github.com/pk1427/GrantFlow-Ai",
     live: "https://grant-flow-ai-web.vercel.app/",
     metrics: [
-      "Funding Protocol",
-      "AI Verification + Escrow",
+      "Milestone escrow",
+      "Grant workflows",
       "Casper -> Base -> Stellar",
     ],
   },
@@ -205,11 +201,11 @@ export const PROJECTS = [
     category: "Identity",
     accent: "from-cyan-300 via-sky-500 to-indigo-500",
     description:
-      "Built an on-chain identity product where users create, edit, and discover wallet-linked profiles with configurable visibility controls.",
+      "IdentifyMe is a wallet-linked identity app for creating user profiles without making every field public by default. Users connect a wallet, create a profile, and manage what parts of it are visible.",
     architecture:
-      "Profile state and access rules live on-chain, while the app focuses on clear identity discovery and update flows.",
+      "The contract layer manages profile ownership and access rules. The frontend handles wallet login, profile editing, visibility settings, and update flows.",
     deliverySignal:
-      "Built as a wallet-native identity primitive with on-chain profile state and configurable access rules.",
+      "The main lesson was to treat privacy as part of the product, not an extra setting. Users need to know what is public, what is restricted, and what they can change later.",
     technologies: [
       "Solidity",
       "Hardhat",
@@ -229,7 +225,6 @@ export const TECHNOLOGIES = [
   "Solidity",
   "EVM",
   "Chainlink",
-  "AI Agents",
   "Escrow",
   "Casper",
   "Base",

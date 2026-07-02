@@ -21,7 +21,7 @@ const Navbar = () => {
       transition={{ duration: 0.6 }}
       className="sticky top-0 z-50 py-3 sm:py-4"
     >
-      <nav className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-[#0c0d0b]/80 px-3 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:px-5">
+      <nav className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-[rgba(12,13,11,0.88)] px-3 py-3 shadow-[0_18px_60px_rgba(0,0,0,0.32)] backdrop-blur-xl sm:px-5">
         <a href="#about" aria-label="Home" className="flex items-center gap-3">
           <img
             src={logo}
@@ -33,7 +33,7 @@ const Navbar = () => {
               Prasad Kapure
             </p>
             <p className="text-xs text-slate-500">
-              Protocol developer | Smart contracts | Web3 apps
+              Blockchain developer | Smart contracts | Web3 apps
             </p>
           </div>
         </a>
@@ -58,7 +58,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={label}
-              className="rounded-md border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:-translate-y-0.5 hover:border-teal-200/50 hover:bg-teal-200/10 hover:text-white sm:p-2.5"
+              className="rounded-md border border-white/10 bg-white/5 p-2 text-slate-300 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition hover:-translate-y-0.5 hover:border-teal-200/50 hover:bg-teal-200/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-teal-200/40 sm:p-2.5"
             >
               <Icon className="text-base sm:text-lg" />
             </a>

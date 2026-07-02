@@ -73,12 +73,12 @@ const Projects = () => {
       >
         <span className="section-kicker">Selected Work</span>
         <h2 className="section-title max-w-3xl">
-          Case studies across markets, treasury, funding, and identity.
+          Projects across markets, treasury, grants, and identity.
         </h2>
         <p className="section-copy max-w-3xl">
-          Each project is framed by the engineering problem it solves: contract
-          mechanics, data trust, wallet execution, account state, and the product
-          surfaces that make protocol behavior understandable.
+          Each project focuses on the same practical questions: what should live
+          on-chain, what data needs to be indexed, and how users understand what
+          they are signing.
         </p>
       </motion.div>
 
@@ -115,7 +115,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 36 }}
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.45, delay: index * 0.06 }}
-              className="group overflow-hidden rounded-lg border border-white/10 bg-[#10120f]/75 shadow-[0_20px_75px_rgba(0,0,0,0.32)] transition duration-300 hover:-translate-y-1 hover:border-teal-200/25"
+              className="group overflow-hidden rounded-lg border border-white/10 bg-[rgba(16,18,15,0.78)] shadow-[0_20px_75px_rgba(0,0,0,0.32)] ring-1 ring-white/[0.025] transition duration-300 hover:-translate-y-1 hover:border-teal-200/30 hover:bg-[#111610]/90 hover:shadow-[0_28px_95px_rgba(0,0,0,0.42)]"
             >
               <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
                 <div className="relative p-3 sm:p-5">
@@ -151,7 +151,7 @@ const Projects = () => {
                   </p>
 
                   <div className="mt-4 grid gap-3 md:grid-cols-[1fr_0.72fr]">
-                    <div className="rounded-lg border border-white/10 bg-white/[0.03] p-3">
+                    <div className="rounded-lg border border-white/10 bg-black/15 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.035)]">
                       <p className="text-[11px] uppercase tracking-[0.24em] text-slate-500">
                         Architecture
                       </p>
@@ -160,9 +160,9 @@ const Projects = () => {
                       </p>
                     </div>
 
-                    <div className="rounded-lg border border-teal-200/15 bg-teal-200/10 p-3">
+                    <div className="rounded-lg border border-teal-200/15 bg-teal-200/10 p-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.035)]">
                       <p className="text-[11px] uppercase tracking-[0.24em] text-teal-100">
-                        Delivery signal
+                        Lesson
                       </p>
                       <p className="mt-2 text-sm leading-6 text-slate-300">
                         {project.deliverySignal}

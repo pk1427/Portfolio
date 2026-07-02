@@ -41,19 +41,19 @@ const protocolFocus = [
   {
     icon: LuTrendingUp,
     label: "Prediction Markets",
-    detail: "BharatMarket: Polygon CPMM pricing, YES/NO trading, oracle resolution",
+    detail: "BharatMarket: Polygon CPMM pricing, YES/NO trading, Chainlink resolution",
     color: "text-amber-200",
   },
   {
     icon: LuLandmark,
     label: "Treasury & Risk",
-    detail: "TreasuryOS: multi-asset risk scanning with on-chain attestation",
+    detail: "TreasuryOS: treasury snapshots, reports, and on-chain attestations",
     color: "text-violet-300",
   },
   {
     icon: LuCoins,
-    label: "Funding Protocols",
-    detail: "GrantFlow AI: milestone escrow with AI-verified evidence",
+    label: "Grant Funding",
+    detail: "GrantFlow: milestone escrow, validation, and staged fund releases",
     color: "text-teal-300",
   },
   {
@@ -73,7 +73,7 @@ const skillGroups = [
       { icon: SiSolana, label: "Solana", note: "Anchor programs", color: "text-emerald-300" },
       { icon: SiPolygon, label: "Polygon", note: "BharatMarket", color: "text-violet-300" },
       { icon: SiStellar, label: "Stellar", note: "Liquidity routing research", color: "text-sky-300" },
-      { icon: LuLandmark, label: "Casper / Base", note: "GrantFlow multi-chain rails", color: "text-cyan-200" },
+      { icon: LuLandmark, label: "Casper / Base", note: "GrantFlow integrations", color: "text-cyan-200" },
       { icon: LuCoins, label: "USDC rails", note: "Stablecoin flows", color: "text-amber-200" },
     ],
   },
@@ -130,15 +130,14 @@ const Technologies = () => {
         <div className="grid gap-6 sm:gap-8 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <div className="section-header">
-              <span className="section-kicker">Protocol Stack</span>
+              <span className="section-kicker">Technical Stack</span>
               <h2 className="section-title max-w-xl">
                 Ethereum, Solana, Polygon, and the product layer around them.
               </h2>
               <p className="section-copy">
-                A senior Web3 portfolio should show what each tool is used for.
-                This stack is organized around the systems I actually build:
-                markets, smart contracts, oracle resolution, wallet execution,
-                and production frontends.
+                This stack is organized around the work I have actually done:
+                smart contracts, oracle integrations, wallet flows, indexers,
+                APIs, and product frontends.
               </p>
             </div>
 
@@ -149,7 +148,7 @@ const Technologies = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   initial={{ opacity: 0, x: -24 }}
                   transition={{ duration: 0.45, delay: index * 0.08 }}
-                  className="grid grid-cols-[42px_1fr] items-center gap-3 rounded-lg border border-white/10 bg-[#10120f]/80 p-3 shadow-[0_16px_45px_rgba(0,0,0,0.22)] sm:grid-cols-[48px_1fr] sm:gap-4 sm:p-4"
+                className="grid grid-cols-[42px_1fr] items-center gap-3 rounded-lg border border-white/10 bg-[#10120f]/80 p-3 shadow-[0_16px_45px_rgba(0,0,0,0.22)] ring-1 ring-white/[0.02] transition hover:-translate-y-0.5 hover:border-teal-200/25 hover:bg-[#121711]/80 sm:grid-cols-[48px_1fr] sm:gap-4 sm:p-4"
                 >
                   <div className="flex h-10 w-10 items-center justify-center rounded-md border border-white/10 bg-white/[0.045] sm:h-12 sm:w-12">
                     <Icon className={`text-xl sm:text-2xl ${color}`} />
@@ -162,19 +161,18 @@ const Technologies = () => {
               ))}
             </div>
 
-            <div className="mt-3 rounded-lg border border-white/10 bg-gradient-to-br from-teal-200/10 via-white/[0.035] to-amber-200/10 p-4 sm:p-5">
+            <div className="mt-3 rounded-lg border border-white/10 bg-gradient-to-br from-teal-200/10 via-white/[0.035] to-amber-200/10 p-4 shadow-[0_18px_60px_rgba(0,0,0,0.25)] sm:p-5">
               <p className="text-[11px] uppercase tracking-[0.28em] text-slate-500">
-                Current build thesis
+                How I connect the pieces
               </p>
               <p className="mt-3 text-sm leading-6 text-slate-300 sm:leading-7">
-                Every build ties the same three layers together: contracts
-                that encode the rules, an oracle or attestation layer that
-                keeps state trustworthy, and a frontend that explains what&apos;s
-                happening before the user signs — whether that&apos;s a market,
-                a treasury report, or a funding milestone.
+                Most Web3 products need the same pieces to work together:
+                contracts that define the rules, off-chain services that make
+                data easy to query, and a frontend that explains what happens
+                before and after the user signs.
               </p>
               <div className="mt-4 grid grid-cols-3 gap-2 sm:gap-3">
-                {["Contracts", "Attestation", "Wallet UX"].map((item) => (
+                {["Contracts", "Indexed data", "Wallet UX"].map((item) => (
                   <div
                     key={item}
                     className="rounded-md border border-white/10 bg-black/20 px-2 py-2 text-center text-[11px] font-semibold text-slate-200 sm:px-3 sm:text-xs"
@@ -193,7 +191,7 @@ const Technologies = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: 28 }}
                 transition={{ duration: 0.5, delay: groupIndex * 0.06 }}
-                className="rounded-lg border border-white/10 bg-[#0f120e]/85 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.3)] sm:p-5"
+                className="rounded-lg border border-white/10 bg-[#0f120e]/85 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.3)] ring-1 ring-white/[0.025] sm:p-5"
               >
                 <div className="mb-4 flex flex-wrap items-center justify-between gap-3 sm:gap-4">
                   <div className="flex items-center gap-3">

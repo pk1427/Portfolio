@@ -11,10 +11,11 @@ const Experience = () => {
         className="section-header mb-8 sm:mb-12"
       >
         <span className="section-kicker">Experience</span>
-        <h2 className="section-title">Protocol work in real teams.</h2>
+        <h2 className="section-title">Blockchain work in real teams.</h2>
         <p className="section-copy">
-          Internship and production experience across blockchain and full-stack
-          teams where delivery, reliability, and execution speed mattered.
+          Internship and part-time experience across blockchain and full-stack
+          teams, with hands-on work in contracts, dApps, integrations, and
+          backend services.
         </p>
       </motion.div>
 
@@ -23,7 +24,7 @@ const Experience = () => {
         {EXPERIENCES.map((experience, index) => (
           <div
             key={`${experience.company}-${experience.year}`}
-            className="relative mb-4 grid items-start gap-4 rounded-lg border border-white/10 bg-[#10120f]/75 p-4 shadow-[0_20px_75px_rgba(0,0,0,0.3)] transition hover:border-amber-200/20 sm:mb-6 sm:p-5 md:grid-cols-[220px_1fr] md:p-6"
+            className="relative mb-4 grid items-start gap-4 rounded-lg border border-white/10 bg-[#10120f]/75 p-4 shadow-[0_20px_75px_rgba(0,0,0,0.3)] ring-1 ring-white/[0.025] transition duration-300 hover:-translate-y-0.5 hover:border-amber-200/25 hover:bg-[#121711]/80 sm:mb-6 sm:p-5 md:grid-cols-[220px_1fr] md:p-6"
           >
             <div className="absolute left-4 top-8 hidden h-3 w-3 rounded-sm border border-teal-200/50 bg-teal-200 md:block" />
             <motion.div

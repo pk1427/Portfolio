@@ -1,0 +1,75 @@
+<svg width="1900" height="970" viewBox="0 0 1900 970" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1900" height="970" fill="#060A13"/>
+  <rect x="54" y="48" width="1792" height="874" rx="34" fill="#0B1021" stroke="#1E293B" stroke-width="2"/>
+  <rect x="91" y="91" width="1720" height="96" rx="24" fill="#0F172A" stroke="#334155"/>
+  <text x="132" y="143" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700">Cardano Protocol Explorer</text>
+  <text x="132" y="170" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18">Unified dashboard for wallets, tokens, and DeFi protocols</text>
+  <rect x="1450" y="116" width="312" height="46" rx="14" fill="#1E3A5F" stroke="#0EA5E9" stroke-opacity="0.45"/>
+  <circle cx="1480" cy="139" r="7" fill="#38BDF8"/>
+  <text x="1500" y="146" fill="#E0F2FE" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">CIP-30 wallet connected</text>
+
+  <rect x="91" y="222" width="525" height="238" rx="24" fill="#0F172A" stroke="#334155"/>
+  <text x="132" y="272" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">WALLET OVERVIEW</text>
+  <text x="132" y="344" fill="#F8FAFC" font-family="Inter, Arial, sans-serif" font-size="64" font-weight="800">12,840 ADA</text>
+  <text x="132" y="383" fill="#7DD3FC" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">+2.4% portfolio value</text>
+  <rect x="132" y="412" width="405" height="14" rx="7" fill="#1E293B"/>
+  <rect x="132" y="412" width="243" height="14" rx="7" fill="#0EA5E9"/>
+  <rect x="390" y="412" width="97" height="14" fill="#A855F7"/>
+  <rect x="502" y="412" width="35" height="14" rx="7" fill="#F59E0B"/>
+
+  <rect x="645" y="222" width="560" height="238" rx="24" fill="#0F172A" stroke="#334155"/>
+  <text x="686" y="272" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">TOKEN HOLDINGS</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="22" font-weight="600">
+    <text x="686" y="332" fill="#E2E8F0">ADA</text>
+    <text x="1038" y="332" fill="#F8FAFC" text-anchor="end">12,840</text>
+    <text x="1112" y="332" fill="#94A3B8" text-anchor="end">78%</text>
+    <text x="686" y="382" fill="#E2E8F0">MIN</text>
+    <text x="1038" y="382" fill="#F8FAFC" text-anchor="end">4,250</text>
+    <text x="1112" y="382" fill="#94A3B8" text-anchor="end">22%</text>
+  </g>
+  <g stroke-width="10" stroke-linecap="round">
+    <line x1="805" y1="324" x2="933" y2="324" stroke="#0EA5E9"/>
+    <line x1="805" y1="374" x2="865" y2="374" stroke="#A855F7"/>
+  </g>
+
+  <rect x="1234" y="222" width="577" height="238" rx="24" fill="#0F172A" stroke="#334155"/>
+  <text x="1275" y="272" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">DEX INTEGRATIONS</text>
+  <rect x="1275" y="303" width="172" height="56" rx="16" fill="#1E293B" stroke="#0EA5E9" stroke-opacity="0.45"/>
+  <text x="1298" y="339" fill="#E0F2FE" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Minswap</text>
+  <rect x="1463" y="303" width="172" height="56" rx="16" fill="#1E293B" stroke="#A855F7" stroke-opacity="0.45"/>
+  <text x="1486" y="339" fill="#E9D5FF" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">WingRiders</text>
+  <rect x="1652" y="303" width="159" height="56" rx="16" fill="#1E293B" stroke="#F59E0B" stroke-opacity="0.45"/>
+  <text x="1675" y="339" fill="#FDE68A" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Splash</text>
+  <text x="1275" y="398" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">USDM stablecoin ready</text>
+  <text x="1275" y="432" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="22">Blockfrost indexing active</text>
+
+  <rect x="91" y="494" width="824" height="335" rx="24" fill="#0F172A" stroke="#334155"/>
+  <text x="132" y="544" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">PROTOCOL ACTIVITY</text>
+  <g font-family="Inter, Arial, sans-serif" font-size="20" font-weight="600">
+    <text x="132" y="604" fill="#E2E8F0">Minswap LP Position</text>
+    <text x="784" y="604" fill="#7DD3FC" text-anchor="end">Active</text>
+    <text x="132" y="664" fill="#E2E8F0">WingRiders Swap</text>
+    <text x="784" y="664" fill="#7DD3FC" text-anchor="end">Completed</text>
+    <text x="132" y="724" fill="#E2E8F0">Splash Stake Pool</text>
+    <text x="784" y="724" fill="#7DD3FC" text-anchor="end">Delegated</text>
+    <text x="132" y="784" fill="#E2E8F0">USDM Reserve</text>
+    <text x="784" y="784" fill="#7DD3FC" text-anchor="end">Synced</text>
+  </g>
+  <line x1="132" y1="622" x2="760" y2="622" stroke="#1E293B" stroke-width="2"/>
+  <line x1="132" y1="682" x2="760" y2="682" stroke="#1E293B" stroke-width="2"/>
+  <line x1="132" y1="742" x2="760" y2="742" stroke="#1E293B" stroke-width="2"/>
+
+  <rect x="949" y="494" width="862" height="335" rx="24" fill="#0F172A" stroke="#334155"/>
+  <text x="990" y="544" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="600">TRANSACTION HISTORY</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="990" y="581" width="780" height="58" rx="16" fill="#0B1221" stroke="#1E293B"/>
+    <text x="1022" y="617" fill="#F8FAFC" font-size="20" font-weight="700">Swap ADA → MIN</text>
+    <text x="1608" y="617" fill="#7DD3FC" font-size="18" font-weight="700">Minswap</text>
+    <rect x="990" y="658" width="780" height="58" rx="16" fill="#0B1221" stroke="#1E293B"/>
+    <text x="1022" y="694" fill="#F8FAFC" font-size="20" font-weight="700">LP Token Stake</text>
+    <text x="1608" y="694" fill="#A855F7" font-size="18" font-weight="700">WingRiders</text>
+    <rect x="990" y="735" width="780" height="58" rx="16" fill="#0B1221" stroke="#1E293B"/>
+    <text x="1022" y="771" fill="#F8FAFC" font-size="20" font-weight="700">Delegate Stake Pool</text>
+    <text x="1608" y="771" fill="#F59E0B" font-size="18" font-weight="700">Splash</text>
+  </g>
+</svg>

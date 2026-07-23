@@ -14,16 +14,16 @@ export const NAV_LINKS = [
 ];
 
 export const HERO_STATS = [
-  { value: "4", label: "Main Web3 projects built" },
-  { value: "6", label: "Ethereum, Solana, Polygon, Casper, Base, Stellar" },
-  { value: "3+", label: "Domains: markets, treasury, funding, identity" },
+  { value: "5+", label: "Production Web3 projects" },
+  { value: "7", label: "Blockchain ecosystems" },
+  { value: "10+", label: "Smart contracts developed" },
 ];
 
 export const HERO_CONTENT = (
   <>
-    Early-career blockchain developer with internship and part-time experience
-    across smart contracts, dApps, wallet flows, oracle integrations, and backend
-    systems. Work spans Solana, Ethereum, Polygon, Casper, Base, and Stellar.
+    Building production-grade smart contracts, DeFi applications, and
+    multi-chain Web3 products across Ethereum, Solana, Polygon, Cardano,
+    Base, Casper, and Stellar ecosystems.
   </>
 );
 
@@ -48,20 +48,22 @@ export const PROTOCOL_PRINCIPLES = [
 export const EXPERIENCES = [
   {
     year: "Oct 2025 – Present",
-    role: "Blockchain Developer (Intern → Part-time)",
+    role: "Blockchain Developer",
     company: "AppAvengers",
+    subtitle: "AppAvengers | Oct 2025 – Present",
     companyUrl: "https://appavengers.com",
     description:
-      "Completed a 6-month blockchain developer internship and continued part-time. Built smart contract and dApp features across Solana and EVM projects, including a Solana lottery using Anchor, Rust, USDC flows, and Switchboard randomness. Also contributed to DeFi research and frontend/backend integration work where contract behavior needed to be clear in the product.",
+      "Joined AppAvengers as a Blockchain Developer Intern and successfully transitioned to a full-time Blockchain Developer role after four months.\n- Built production-grade applications across Ethereum, Solana, and Cardano ecosystems.\n- Developed smart contracts, wallet integrations, and full-stack Web3 applications using Solidity, Rust, TypeScript, and Next.js.\n- Contributed to TreasuryOS, Cardano protocol integrations, and DeFi infrastructure initiatives.\n- Worked across frontend, backend, database, and blockchain layers to deliver end-to-end Web3 products.",
     technologies: [
       "Solidity",
       "Rust",
       "Anchor",
-      "Solana",
-      "Switchboard",
-      "Fhenix",
       "TypeScript",
+      "Next.js",
+      "Cardano",
       "Stellar",
+      "Fhenix",
+      "Solana",
     ],
     current: true,
   },
@@ -144,21 +146,23 @@ export const PROJECTS = [
     category: "Treasury & Risk",
     accent: "from-violet-300 via-purple-400 to-fuchsia-500",
     description:
-      "TreasuryOS helps teams track ETH, WETH, and USDC holdings and understand basic treasury risk. It turns wallet balances into snapshots, reports, and stress tests instead of leaving users to inspect everything manually.",
+      "TreasuryOS is an AI-powered treasury intelligence platform that transforms on-chain portfolio data into actionable treasury insights. It enables organizations to analyze wallet positions, assess risk exposure, run stress simulations, and publish verifiable on-chain attestations.",
     features:
-      "Wallet risk scanning, concentration & stress-test modeling, on-chain attestation, treasury snapshot indexing",
+      "Unified wallet and protocol adapters, Treasury Intelligence Engine, on-chain attestations via KeeperHub",
     architecture:
-      "The backend stores treasury snapshots and attestation history over time. The risk engine uses those snapshots for concentration checks and stablecoin depeg simulations, while KeeperHub records review attestations on-chain.",
+      "Unified wallet and protocol adapters aggregate treasury positions across Ethereum-based ecosystems. The Treasury Intelligence Engine generates composite risk scores, concentration analysis, and stress-testing scenarios. Treasury reports are persisted in PostgreSQL and can be published on-chain using KeeperHub attestations for transparency and auditability.",
     deliverySignal:
-      "The main lesson was that raw chain data is only useful when it is organized for decisions. The harder part was making reports clear enough for a team to act on.",
+      "The biggest lesson was realizing that raw blockchain data is not enough. Teams need clear reports, risk visibility, and decision-making tools rather than wallet balances spread across multiple interfaces.",
     technologies: [
-      "Solidity",
-      "TypeScript",
       "Next.js",
-      "Wagmi",
+      "TypeScript",
       "PostgreSQL",
-      "Prisma",
-      "Ethereum (Sepolia)",
+      "Viem",
+      "OpenRouter",
+      "KeeperHub",
+      "Ethereum",
+      "Uniswap V3",
+      "Aave V3",
     ],
     github: "https://github.com/pk1427/treasuryos",
     live: "https://treasuryos-web.vercel.app/",

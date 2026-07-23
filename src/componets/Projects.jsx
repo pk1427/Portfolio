@@ -73,7 +73,7 @@ const Projects = () => {
       >
         <span className="section-kicker">Selected Work</span>
         <h2 className="section-title max-w-3xl">
-          Projects across markets, treasury, grants, and identity.
+          Projects across DeFi, treasury, Cardano, grants, and identity.
         </h2>
         <p className="section-copy max-w-3xl">
           Each project focuses on the same practical questions: what should live

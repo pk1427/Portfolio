@@ -11,11 +11,12 @@ const Experience = () => {
         className="section-header mb-8 sm:mb-12"
       >
         <span className="section-kicker">Experience</span>
-        <h2 className="section-title">Blockchain work in real teams.</h2>
+        <h2 className="section-title">Production Web3 engineering across chains.</h2>
         <p className="section-copy">
-          Internship and part-time experience across blockchain and full-stack
-          teams, with hands-on work in contracts, dApps, integrations, and
-          backend services.
+          Full-time blockchain developer building production-grade applications
+          across Ethereum, Solana, and Cardano ecosystems with hands-on work
+          in smart contracts, wallet integrations, DeFi infrastructure, and
+          full-stack Web3 products.
         </p>
       </motion.div>
 
@@ -52,11 +53,26 @@ const Experience = () => {
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex text-sm text-teal-200 transition hover:text-white"
               >
-                {experience.company}
+                {experience.subtitle || experience.company}
               </a>
-              <p className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
-                {experience.description}
-              </p>
+              <div className="mt-4 text-sm leading-7 text-slate-300 sm:text-base">
+                {experience.description.split("\n").map((line, i) => {
+                  const trimmed = line.trim();
+                  if (!trimmed) return null;
+                  if (trimmed.startsWith("-")) {
+                    return (
+                      <p key={i} className="ml-4 list-disc">
+                        {trimmed.slice(2)}
+                      </p>
+                    );
+                  }
+                  return (
+                    <p key={i} className={i > 0 ? "mt-2" : ""}>
+                      {trimmed}
+                    </p>
+                  );
+                })}
+              </div>
 
               <div className="mt-5 flex flex-wrap gap-2 sm:gap-3">
                 {experience.technologies.map((tech) => (

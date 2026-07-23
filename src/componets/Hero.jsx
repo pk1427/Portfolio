@@ -51,7 +51,7 @@ const Hero = () => {
               variants={childVariants}
               className="mb-5 inline-flex max-w-full items-center rounded-md border border-amber-200/25 bg-amber-200/10 px-3 py-2 text-[10px] font-medium uppercase tracking-[0.2em] text-amber-100 sm:mb-6 sm:px-4 sm:text-xs sm:tracking-[0.28em]"
             >
-              Blockchain developer
+              Blockchain Developer
             </motion.span>
 
             <motion.h1
@@ -82,10 +82,35 @@ const Hero = () => {
                 href={CONTACT.resume}
                 target="_blank"
                 rel="noopener noreferrer"
+                download
                 className="secondary-action"
               >
-                Open Resume
+                Download Resume
               </a>
+            </motion.div>
+
+            <motion.div
+              variants={childVariants}
+              className="mt-6 rounded-lg border border-white/10 bg-white/[0.03] p-4 text-left sm:mt-8 sm:p-5"
+            >
+              <p className="text-[10px] font-medium uppercase tracking-[0.22em] text-slate-500 sm:text-xs">
+                Available for
+              </p>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {[
+                  "Blockchain Developer Roles",
+                  "Smart Contract Engineering",
+                  "DeFi Development",
+                  "Full-Stack Web3 Engineering",
+                ].map((item) => (
+                  <span
+                    key={item}
+                    className="chip text-xs"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </motion.div>
 
             <motion.div
@@ -119,7 +144,7 @@ const Hero = () => {
                     Active focus
                   </p>
                   <p className="mt-1 text-xs font-medium leading-5 text-white sm:text-sm">
-                    DeFi, prediction markets, treasury tools, grants, identity
+                    DeFi Infrastructure, Treasury Intelligence, Cardano Ecosystem, AI x Blockchain, Agentic Finance
                   </p>
                 </div>
                 <span className="shrink-0 rounded-md border border-emerald-300/30 bg-emerald-300/10 px-2.5 py-1 text-[11px] font-medium text-emerald-100 sm:px-3 sm:text-xs">

@@ -17,13 +17,13 @@ const App = () => {
 
       <div className="mx-auto max-w-7xl px-3 min-[420px]:px-4 sm:px-6 lg:px-8">
         <Navbar />
-        <main className="pb-16">
-          <Hero />
-          <Technologies />
-          <Projects />
-          <Experience />
-          <Contact />
-        </main>
+      <main className="pb-16">
+        <Hero />
+        <Technologies />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
       </div>
     </div>
   );

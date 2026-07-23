@@ -32,9 +32,9 @@ const Navbar = () => {
             <p className="text-sm font-semibold uppercase tracking-[0.24em] text-slate-200">
               Prasad Kapure
             </p>
-            <p className="text-xs text-slate-500">
-              Blockchain developer | Smart contracts | Web3 apps
-            </p>
+              <p className="text-xs text-slate-500">
+                Blockchain Developer | Smart Contract Engineer | Full-Stack Web3 Developer
+              </p>
           </div>
         </a>
 

@@ -66,7 +66,7 @@ const Contact = () => {
         </div>
 
         <div className="border-t border-white/10 px-4 py-5 text-sm text-slate-500 sm:px-8 lg:px-10">
-          Based in {CONTACT.address}
+          Based in {CONTACT.address} · Built with Next.js, TypeScript, and deployed on Vercel.
         </div>
       </div>
     </section>

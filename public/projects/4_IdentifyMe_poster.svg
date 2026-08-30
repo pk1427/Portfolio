@@ -1,0 +1,82 @@
+<svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="plum" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2D1B4E"/>
+      <stop offset="100%" stop-color="#20143A"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1600" fill="url(#plum)"/>
+
+  <!-- fingerprint made of hex characters, ring pattern -->
+  <g font-family="Courier New, monospace" font-size="13" fill="#D4AF37" opacity="0.35">
+    <text x="600" y="500" text-anchor="middle">0x9f 2a c1 4e 7b d0 33 88 f6 1c a9 05 e2</text>
+  </g>
+  <g stroke="#D4AF37" stroke-width="1.4" fill="none" opacity="0.5">
+    <circle cx="600" cy="560" r="70"/>
+    <circle cx="600" cy="560" r="100"/>
+    <circle cx="600" cy="560" r="130"/>
+    <circle cx="600" cy="560" r="160"/>
+    <path d="M 470 560 A 130 160 0 0 1 730 560" />
+  </g>
+
+  <text x="80" y="130" font-family="Courier New, monospace" font-size="18" letter-spacing="5" fill="#D4AF37">WALLET-BASED · DECENTRALIZED PROFILES</text>
+  <line x1="80" y1="155" x2="1120" y2="155" stroke="#D4AF37" stroke-width="2"/>
+
+  <text x="78" y="290" text-anchor="start" font-family="Georgia, 'Times New Roman', serif" font-size="110" font-weight="700" fill="#F6F1E8">IdentifyMe</text>
+  <text x="80" y="335" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#C9B8E0">Your identity. Your keys. Your control.</text>
+
+  <!-- ID card -->
+  <g transform="translate(200,720)">
+    <rect x="0" y="0" width="800" height="360" rx="18" fill="#20143A" stroke="#D4AF37" stroke-width="2"/>
+    <rect x="0" y="0" width="800" height="70" rx="18" fill="#D4AF37"/>
+    <rect x="0" y="40" width="800" height="30" fill="#D4AF37"/>
+    <text x="30" y="46" font-family="Georgia, serif" font-weight="700" font-size="26" fill="#20143A">ON-CHAIN IDENTITY CARD</text>
+
+    <circle cx="120" cy="200" r="70" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <text x="120" y="195" text-anchor="middle" font-family="Georgia, serif" font-size="46" fill="#D4AF37">ID</text>
+    <text x="120" y="225" text-anchor="middle" font-family="Courier New, monospace" font-size="12" fill="#C9B8E0">VERIFIED</text>
+
+    <g font-family="Courier New, monospace" fill="#F6F1E8">
+      <text x="230" y="140" font-size="15" fill="#C9B8E0" letter-spacing="2">WALLET</text>
+      <text x="230" y="170" font-size="24">0x71A3...9F0d</text>
+
+      <text x="230" y="215" font-size="15" fill="#C9B8E0" letter-spacing="2">VISIBILITY</text>
+      <text x="230" y="245" font-size="24">Custom · Field-level</text>
+
+      <text x="230" y="290" font-size="15" fill="#C9B8E0" letter-spacing="2">STORAGE</text>
+      <text x="230" y="320" font-size="24">On-chain · Ethereum</text>
+    </g>
+  </g>
+
+  <line x1="80" y1="1150" x2="1120" y2="1150" stroke="#4A3670" stroke-width="1"/>
+
+  <!-- feature row -->
+  <g font-family="Helvetica, Arial, sans-serif" font-size="19" font-weight="600">
+    <rect x="80" y="1190" width="300" height="56" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <text x="105" y="1226" fill="#F6F1E8">Secure Profiles</text>
+
+    <rect x="400" y="1190" width="300" height="56" fill="#D4AF37"/>
+    <text x="425" y="1226" fill="#20143A">Edit &amp; Update</text>
+
+    <rect x="720" y="1190" width="400" height="56" fill="none" stroke="#D4AF37" stroke-width="2"/>
+    <text x="745" y="1226" fill="#F6F1E8">Privacy &amp; Transparency</text>
+  </g>
+
+  <g font-family="Courier New, monospace" fill="#C9B8E0">
+    <text x="80" y="1320" font-size="16" letter-spacing="2">CONTRACTS</text>
+    <text x="80" y="1355" font-size="26" fill="#F6F1E8">Solidity · Hardhat</text>
+
+    <text x="450" y="1320" font-size="16" letter-spacing="2">FRONTEND</text>
+    <text x="450" y="1355" font-size="26" fill="#F6F1E8">Next.js · TypeScript</text>
+
+    <text x="820" y="1320" font-size="16" letter-spacing="2">INTERACTION</text>
+    <text x="820" y="1355" font-size="26" fill="#F6F1E8">Ethers.js</text>
+  </g>
+
+  <line x1="80" y1="1410" x2="1120" y2="1410" stroke="#4A3670" stroke-width="1"/>
+
+  <text x="80" y="1490" font-family="Georgia, serif" font-weight="700" font-size="30" fill="#F6F1E8">IdentifyMe</text>
+  <text x="80" y="1528" font-family="Courier New, monospace" font-size="18" fill="#8C79AE">identity-dapp.vercel.app</text>
+  <text x="1120" y="1528" text-anchor="end" font-family="Courier New, monospace" font-size="18" fill="#8C79AE">github.com/pk1427</text>
+</svg>

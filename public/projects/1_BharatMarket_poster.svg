@@ -1,0 +1,100 @@
+<svg viewBox="0 0 1200 1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A0F1E"/>
+      <stop offset="100%" stop-color="#121B33"/>
+    </linearGradient>
+    <linearGradient id="yesBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0F8C6B"/>
+      <stop offset="100%" stop-color="#1FA37D"/>
+    </linearGradient>
+    <linearGradient id="noBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C4522B"/>
+      <stop offset="100%" stop-color="#B23F1E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="1600" fill="url(#bg)"/>
+
+  <!-- faint scoreboard grid dots -->
+  <g opacity="0.06">
+    <path d="M0 0 L1200 0" stroke="#E8A33D" stroke-width="1"/>
+    <g stroke="#E8A33D" stroke-width="1">
+      <line x1="0" y1="200" x2="1200" y2="200"/>
+      <line x1="0" y1="400" x2="1200" y2="400"/>
+      <line x1="0" y1="600" x2="1200" y2="600"/>
+      <line x1="0" y1="1200" x2="1200" y2="1200"/>
+      <line x1="0" y1="1400" x2="1200" y2="1400"/>
+    </g>
+  </g>
+
+  <!-- top rule -->
+  <rect x="80" y="70" width="1040" height="3" fill="#E8A33D"/>
+  <text x="80" y="55" font-family="Courier New, monospace" font-size="20" letter-spacing="6" fill="#E8A33D">TESTNET BETA · POLYGON AMOY</text>
+  <text x="1120" y="55" text-anchor="end" font-family="Courier New, monospace" font-size="20" letter-spacing="3" fill="#7C8BA8">LIVE ODDS</text>
+
+  <!-- headline -->
+  <text x="80" y="240" font-family="Arial Black, Arial, sans-serif" font-size="140" font-weight="900" fill="#F5F0E6" letter-spacing="-2">BHARAT</text>
+  <text x="80" y="380" font-family="Arial Black, Arial, sans-serif" font-size="140" font-weight="900" fill="#F5F0E6" letter-spacing="-2">MAR<tspan fill="#1FA37D">K</tspan>ET</text>
+
+  <text x="82" y="440" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#B9C2D6">Prediction markets for crypto &amp; cricket, settled on-chain.</text>
+
+  <!-- scoreboard panel -->
+  <rect x="80" y="500" width="1040" height="330" fill="#0D1424" stroke="#243357" stroke-width="2"/>
+  <text x="110" y="555" font-family="Courier New, monospace" font-size="22" letter-spacing="4" fill="#7C8BA8">WILL BTC CLOSE ABOVE $70K THIS WEEK?</text>
+
+  <!-- YES bar -->
+  <text x="110" y="620" font-family="Arial, sans-serif" font-weight="700" font-size="34" fill="#F5F0E6">YES</text>
+  <rect x="110" y="640" width="700" height="46" fill="#1A2440"/>
+  <rect x="110" y="640" width="434" height="46" fill="url(#yesBar)"/>
+  <text x="560" y="672" font-family="Courier New, monospace" font-size="30" font-weight="700" fill="#F5F0E6">62%</text>
+
+  <!-- NO bar -->
+  <text x="110" y="730" font-family="Arial, sans-serif" font-weight="700" font-size="34" fill="#F5F0E6">NO</text>
+  <rect x="110" y="750" width="700" height="46" fill="#1A2440"/>
+  <rect x="110" y="750" width="266" height="46" fill="url(#noBar)"/>
+  <text x="392" y="782" font-family="Courier New, monospace" font-size="30" font-weight="700" fill="#F5F0E6">38%</text>
+
+  <!-- side stat -->
+  <line x1="850" y1="540" x2="850" y2="800" stroke="#243357" stroke-width="2"/>
+  <text x="880" y="580" font-family="Courier New, monospace" font-size="16" letter-spacing="2" fill="#7C8BA8">COLLATERAL</text>
+  <text x="880" y="612" font-family="Arial, sans-serif" font-weight="700" font-size="30" fill="#F5F0E6">USDC</text>
+  <text x="880" y="670" font-family="Courier New, monospace" font-size="16" letter-spacing="2" fill="#7C8BA8">SETTLEMENT</text>
+  <text x="880" y="702" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#F5F0E6">Chainlink</text>
+  <text x="880" y="730" font-family="Arial, sans-serif" font-weight="700" font-size="24" fill="#F5F0E6">Functions</text>
+
+  <!-- flow ticker -->
+  <text x="80" y="900" font-family="Courier New, monospace" font-size="22" letter-spacing="3" fill="#E8A33D">CREATE  →  TRADE  →  SETTLE  →  REDEEM</text>
+  <line x1="80" y1="925" x2="1120" y2="925" stroke="#243357" stroke-width="2" stroke-dasharray="6 8"/>
+
+  <!-- feature chips -->
+  <g font-family="Arial, sans-serif" font-size="20" font-weight="600" fill="#0A0F1E">
+    <rect x="80" y="970" width="290" height="60" fill="#E8A33D"/>
+    <text x="105" y="1008">Crypto Markets</text>
+
+    <rect x="390" y="970" width="290" height="60" fill="#1FA37D"/>
+    <text x="415" y="1008" fill="#0A0F1E">Cricket Markets</text>
+
+    <rect x="700" y="970" width="420" height="60" fill="#243357"/>
+    <text x="725" y="1008" fill="#F5F0E6">Creator Console + SDK</text>
+  </g>
+
+  <!-- stats row like an innings card -->
+  <g font-family="Courier New, monospace" fill="#B9C2D6">
+    <text x="80" y="1110" font-size="18" letter-spacing="2">DATA PROVIDERS</text>
+    <text x="80" y="1145" font-size="26" fill="#F5F0E6">CoinGecko · CricAPI</text>
+
+    <text x="470" y="1110" font-size="18" letter-spacing="2">NETWORK</text>
+    <text x="470" y="1145" font-size="26" fill="#F5F0E6">Polygon Amoy</text>
+
+    <text x="820" y="1110" font-size="18" letter-spacing="2">STACK</text>
+    <text x="820" y="1145" font-size="26" fill="#F5F0E6">Next.js · Prisma</text>
+  </g>
+
+  <line x1="80" y1="1210" x2="1120" y2="1210" stroke="#243357" stroke-width="2"/>
+
+  <!-- footer masthead -->
+  <text x="80" y="1500" font-family="Arial Black, Arial, sans-serif" font-size="30" font-weight="900" fill="#F5F0E6">BharatMarket</text>
+  <text x="80" y="1540" font-family="Courier New, monospace" font-size="18" fill="#7C8BA8">bharat-market-main.vercel.app</text>
+  <text x="1120" y="1540" text-anchor="end" font-family="Courier New, monospace" font-size="18" fill="#7C8BA8">github.com/pk1427</text>
+</svg>

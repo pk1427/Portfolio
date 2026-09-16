@@ -15,9 +15,9 @@ export const experiences: Experience[] = [
     company: "AppAvengers",
     role: "Blockchain Developer",
     location: "Remote - 10 mos",
-    period: { start: "Oct 2025", end: "Present" },
+    period: { start: "Oct 2025", end: "July 2026" },
     logo: "/experience/Appavengers.webp",
-    website: "https://appavengers.com",
+    website: "https://www.appavengers.co",
     isCurrent: true,
   },
   {

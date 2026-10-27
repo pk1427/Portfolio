@@ -9,7 +9,7 @@ function BattleRow({
   highlight,
 }: {
   title: string
-  meta: string
+  meta?: string
   description: string
   highlight?: string
 }) {
@@ -26,9 +26,11 @@ function BattleRow({
             <h3 className="min-w-0 text-base leading-snug font-medium text-balance">
               {title}
             </h3>
-            <span className="text-muted-foreground shrink-0 font-mono text-xs tabular-nums">
-              {meta}
-            </span>
+            {meta && (
+              <span className="text-muted-foreground shrink-0 font-mono text-xs tabular-nums">
+                {meta}
+              </span>
+            )}
           </div>
           <p className="text-muted-foreground text-sm leading-relaxed">
             {description}

@@ -4,7 +4,7 @@ import { ProjectList } from "@/components/projects/project-list"
 import { siteUrl } from "@/lib/content/site"
 
 const description =
-  "Blockchain products built by Prasad Kapure - Solidity, Rust, TypeScript and Next.js, from smart contract architecture through to the interface."
+  "Full-stack & Web3 projects by Prasad Kapure - TreasuryOS, Page Duel, Backstop, BharatMarket. Built with React, Next.js, React Native, TypeScript, Solidity, Rust, Supabase, and more."
 
 export const metadata: Metadata = {
   title: "Projects",

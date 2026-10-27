@@ -21,10 +21,10 @@ export const sectionIds = {
 export const skillsVenn = {
   image: "/pratham.png",
   skills: {
-    top: "Smart Contracts",
-    left: "Web3 Infrastructure",
-    right: "DeFi Products",
-    bottom: "Product Thinking\n& User Research",
+    top: "Full-Stack Development",
+    left: "Smart Contracts",
+    right: "Mobile & Web Apps",
+    bottom: "Backend & Security\nDeFi Products\nProduct Thinking",
   },
 }
 

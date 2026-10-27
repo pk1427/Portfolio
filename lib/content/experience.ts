@@ -13,7 +13,7 @@ export const experiences: Experience[] = [
   {
     id: "appavengers",
     company: "AppAvengers",
-    role: "Blockchain Developer",
+    role: "Full-Stack Engineer (Web3)",
     location: "Remote - 10 mos",
     period: { start: "Oct 2025", end: "July 2026" },
     logo: "/experience/Appavengers.webp",
@@ -23,7 +23,7 @@ export const experiences: Experience[] = [
   {
     id: "finsocial",
     company: "Finsocial Digital Systems",
-    role: "Blockchain Developer Intern",
+    role: "Full-Stack Engineer Intern (Web3)",
     location: "Remote - 5 mos",
     period: { start: "Feb 2025", end: "Jun 2025" },
     logo: "/experience/finsocial_digital_logo.jpeg",
@@ -32,7 +32,7 @@ export const experiences: Experience[] = [
   {
     id: "quadb",
     company: "Quadb Technologies",
-    role: "Blockchain Developer Intern",
+    role: "Full-Stack Engineer Intern (Web3)",
     location: "Remote - 3 mos",
     period: { start: "Mar 2025", end: "May 2025" },
     logo: "/experience/Quadb_tech.jpeg",

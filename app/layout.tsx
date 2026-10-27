@@ -20,34 +20,38 @@ const pixelifySans = Pixelify_Sans({
 })
 
 const description =
-  "Blockchain Developer specializing in smart contracts, DeFi applications, and multi-chain Web3 products across Ethereum, Solana, Polygon, Cardano, Base, Casper, and Stellar ecosystems."
+  "Full-stack engineer building production apps across React/Next.js, React Native, Node.js, Supabase and PostgreSQL, plus smart contracts and DeFi on Ethereum, Solana, and Polygon."
 
 const ogImage = "https://freeimage.host/i/prasad-portfolio.f1C7zKl"
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Prasad Kapure - Blockchain Developer | Portfolio",
+    default: "Prasad Kapure | Full-Stack & Web3 Engineer",
     template: "%s | Prasad Kapure",
   },
   description,
   keywords: [
-    "Blockchain Developer",
-    "Smart Contract Engineer",
+    "Full-Stack Engineer",
     "Web3 Developer",
     "DeFi Developer",
+    "Smart Contract Engineer",
     "Solidity Developer",
+    "Rust Developer",
     "React Developer",
     "Next.js Developer",
+    "React Native Developer",
     "TypeScript Developer",
+    "Node.js Developer",
+    "Supabase Developer",
+    "PostgreSQL Developer",
     "Ethereum Developer",
     "Solana Developer",
     "Polygon Developer",
     "Portfolio",
     "India",
     "Prasad Kapure",
-    "Blockchain Engineer",
-    "Full-Stack Web3 Developer",
+    "pk1427",
   ],
   authors: [{ name: "Prasad Kapure" }],
   creator: "Prasad Kapure",
@@ -74,14 +78,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Prasad Kapure Portfolio",
-    title: "Prasad Kapure - Blockchain Developer",
+    title: "Prasad Kapure | Full-Stack & Web3 Engineer",
     description,
     images: [
       {
         url: ogImage,
         width: 1200,
         height: 630,
-        alt: "Prasad Kapure - Blockchain Developer Portfolio",
+        alt: "Prasad Kapure - Full-Stack & Web3 Engineer Portfolio",
       },
     ],
   },
@@ -89,7 +93,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@PrasadKapure5",
     creator: "@PrasadKapure5",
-    title: "Prasad Kapure - Blockchain Developer",
+    title: "Prasad Kapure | Full-Stack & Web3 Engineer",
     description,
     images: [ogImage],
   },
@@ -108,9 +112,9 @@ export const metadata: Metadata = {
     "contact:locality": "Pune",
     "twitter:domain": "prasadkapure.dev",
     "twitter:url": siteUrl,
-    "twitter:image:alt": "Prasad Kapure - Blockchain Developer Portfolio",
+    "twitter:image:alt": "Prasad Kapure - Full-Stack & Web3 Engineer Portfolio",
     "whatsapp:image": ogImage,
-    "whatsapp:title": "Prasad Kapure - Blockchain Developer",
+    "whatsapp:title": "Prasad Kapure | Full-Stack & Web3 Engineer",
     "whatsapp:description": description,
   },
 }

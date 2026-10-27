@@ -20,7 +20,7 @@ export default function StructuredData() {
     alternateName: profile.handle,
     jobTitle: profile.title,
     description:
-      "Blockchain Developer specializing in smart contracts, DeFi applications, and multi-chain Web3 products across Ethereum, Solana, Polygon, Cardano, Base, Casper, and Stellar ecosystems.",
+      "Full-stack engineer building production apps across React/Next.js, React Native, Node.js, Supabase and PostgreSQL, plus smart contracts and DeFi on Ethereum, Solana, and Polygon.",
     url: siteUrl,
     image: `${siteUrl}${profile.avatar}`,
     email: `mailto:${profile.email}`,
@@ -61,7 +61,7 @@ export default function StructuredData() {
         url: siteUrl,
         name: `${profile.name} Portfolio`,
         description:
-          "Portfolio, projects and experience of Prasad Kapure - Blockchain Developer.",
+          "Portfolio, projects and experience of Prasad Kapure - Full-Stack & Web3 Engineer.",
         publisher: { "@id": `${siteUrl}/#person` },
       },
     ],

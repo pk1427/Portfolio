@@ -4,7 +4,7 @@ import { ContactPage } from "@/components/contact/contact-page"
 import { siteUrl } from "@/lib/content/site"
 
 const description =
-  "Get in touch with Prasad Kapure about blockchain developer and smart contract engineering roles, freelance work, or anything he has built."
+  "Get in touch with Prasad Kapure about full-stack, Web3, and smart contract engineering roles, freelance work, or anything he has built."
 
 export const metadata: Metadata = {
   title: "Contact",

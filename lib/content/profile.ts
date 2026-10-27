@@ -2,11 +2,11 @@ export const profile = {
   name: "Prasad Kapure",
   handle: "pk1427",
   wordmark: "PRASAD",
-  title: "Blockchain Developer",
+  title: "Full-Stack Engineer · Web3 & DeFi Developer",
   roles: [
-    "Smart Contract Engineer",
-    "Full-Stack Web3 Developer",
-    "DeFi Infrastructure",
+    "Full-Stack Engineer",
+    "Web3 & DeFi Developer",
+    "Full-Stack Developer (Web3 + Mobile + Backend)",
   ],
   meta: "Pune, IND",
   age: 21,
@@ -17,20 +17,20 @@ export const profile = {
   email: "prasadkapure553@gmail.com",
   resumeUrl: "/Prasad_Kapure_Resume.pdf",
   calendlyUrl: "https://calendly.com/prasadkapure",
-  availability: "Open to blockchain developer and smart contract engineering roles",
+  availability: "Open to full-stack, Web3, and smart contract engineering roles",
 } as const
 
 export const bio: { text: string; strong?: string[] }[] = [
   {
-    text: "I'm Prasad Kapure (call me pk1427) - a Blockchain Developer with hands-on experience in smart contracts, DeFi applications, and multi-chain Web3 products across Ethereum, Solana, Polygon, Cardano, Base, Casper, and Stellar ecosystems.",
+    text: "I'm Prasad Kapure (call me pk1427), a full-stack engineer who builds complete products: databases, secure backends, web and mobile interfaces, and the smart contracts behind them.",
   },
   {
-    text: "I build production-grade smart contracts, dApps, and Web3 tooling with Solidity, Rust, TypeScript, and Next.js - from contract architecture through to the interface.",
-    strong: ["Solidity, Rust, TypeScript, and Next.js"],
+    text: "On the web and mobile side I work with TypeScript, React, Next.js, React Native and Expo; on the backend with Node.js, Express, PostgreSQL, Prisma and Supabase (Auth, Storage, Edge Functions, RLS), with a focus on validation, correctness and security.",
+    strong: ["TypeScript, React, Next.js, React Native, Expo", "Node.js, Express, PostgreSQL, Prisma, Supabase"],
   },
   {
-    text: "On the backend I work with Node.js, Express, PostgreSQL, and Prisma, with a focus on strong validation, correctness, and practical on-chain data handling.",
-    strong: ["Node.js, Express, PostgreSQL, and Prisma"],
+    text: "In Web3 I build smart contracts and DeFi products with Solidity and Rust across Ethereum, Solana, Polygon, Cardano, Base, Casper and Stellar, plus AI-assisted tooling such as treasury analytics, and games with deterministic, testable logic.",
+    strong: ["Solidity and Rust", "Ethereum, Solana, Polygon, Cardano, Base, Casper, Stellar"],
   },
 ]
 
